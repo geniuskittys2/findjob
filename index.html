@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#e9f8ee">
+<meta name="description" content="초등학교 6학년 실과: 나의 흥미·적성·성격을 바탕으로 관심 직업 5가지를 탐색해요.">
+<title>나의 꿈 찾기! 🌱 2단계 관심 직업 탐색하기</title>
+<style>
+:root{--ink:#263c43;--muted:#6c8287;--mint:#e8f9eb;--green:#267a66;--green-dark:#1e6454;--coral:#ff907e;--blue:#d9eeff;--lilac:#f0e9ff;--yellow:#fff0be;--line:#dfebea;--shadow:0 12px 38px rgba(47,100,100,.1);--radius:25px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;font-size:16px;line-height:1.64;background:linear-gradient(145deg,#eafaf0 0%,#eaf5ff 48%,#fff5e8 100%);min-height:100vh;overflow-x:hidden}
+button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid #faad65;outline-offset:3px}button:disabled{cursor:not-allowed;opacity:.45;transform:none!important}a{color:#176a79} .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.container{width:min(1060px,calc(100% - 36px));margin-inline:auto}.hero{position:relative;margin:26px auto 20px;min-height:232px;border:2px solid #fff;border-radius:33px;overflow:hidden;display:grid;grid-template-columns:1.3fr .7fr;align-items:center;background:linear-gradient(115deg,#d3f7dd 0%,#d8f0ff 60%,#ffecc9 100%);box-shadow:var(--shadow);padding:38px 45px}
+.hero:before,.hero:after{content:'';position:absolute;width:260px;height:260px;border:2px dashed rgba(255,255,255,.7);border-radius:50%;top:-160px;left:40%}.hero:after{top:auto;bottom:-215px;left:8%;width:330px;height:330px}.hero-copy{position:relative;z-index:2}.hero-mini{display:inline-flex;align-items:center;gap:6px;background:#fff;border-radius:99px;padding:5px 13px;font-size:13px;font-weight:800;color:#3a826c;box-shadow:0 3px 10px #37755415}.hero h1{font-weight:900;font-size:clamp(29px,4.3vw,43px);line-height:1.25;letter-spacing:-1.6px;margin:15px 0 11px}.hero h1 span{color:#22856e}.hero p{margin:0;font-size:16px;max-width:520px;color:#506c6b;font-weight:600}.hero-art{position:relative;min-height:160px;isolation:isolate}.hero-art .circle{position:absolute;inset:13px 48px 0 auto;width:185px;height:185px;background:#fff9e4;border-radius:50%;box-shadow:inset 0 0 0 12px #fff5d4,0 10px 28px #8ebbb851}.hero-art .plant{position:absolute;right:75px;top:-5px;font-size:115px;filter:drop-shadow(0 9px 3px #92cbb655);animation:bob 4s ease-in-out infinite}.hero-art .ball{position:absolute;right:26px;top:62px;font-size:56px;transform:rotate(17deg)}.hero-art .spark{position:absolute;right:196px;top:7px;font-size:35px}.hero-art .spark2{position:absolute;right:13px;top:11px;font-size:29px}@keyframes bob{50%{transform:translateY(-8px)}}
+.progress{display:flex;align-items:center;justify-content:center;gap:8px;margin:24px 0 20px}.progress .pstep{background:#ffffffac;border:1px solid #ffffff;color:#748886;border-radius:50px;padding:7px 15px;font-size:13px;font-weight:800;white-space:nowrap}.progress .pstep.active{background:#2b8a74;color:white;border-color:#2b8a74;box-shadow:0 6px 16px #419e7b33}.progress .bar{width:35px;height:3px;background:#b6dcd8;border-radius:5px}
+.section-intro{text-align:center;margin:24px auto 22px}.section-intro h2{font-size:clamp(23px,3.8vw,30px);letter-spacing:-1px;margin:0 0 8px}.section-intro p{color:var(--muted);margin:0;font-size:14px}
+.stage{padding-bottom:46px}.question-card{background:rgba(255,255,255,.96);border:1px solid #fff;border-radius:var(--radius);padding:28px 30px;box-shadow:var(--shadow);margin-bottom:18px;position:relative}.question-card .card-head{display:flex;gap:12px;align-items:center;margin-bottom:6px}.question-card .num{flex:0 0 36px;width:36px;height:36px;border-radius:13px;background:var(--yellow);display:grid;place-items:center;font-size:15px;font-weight:900;color:#83611e}.question-card:nth-of-type(2) .num{background:var(--lilac);color:#7154a5}.question-card:nth-of-type(3) .num{background:var(--blue);color:#356a91}.card-head h3{font-size:20px;letter-spacing:-.6px;margin:0}.count{margin-left:auto;font-size:13px;color:#548a77;font-weight:800;padding:4px 9px;background:#effaf2;border-radius:99px}.helper{font-size:13px;color:#788b8c;margin:3px 0 17px 48px}.chips{display:flex;flex-wrap:wrap;gap:10px}.chip{background:#f9fcfb;color:#456165;border:2px solid #e3eeea;border-radius:16px;padding:9px 14px;font-weight:800;font-size:14px;display:inline-flex;align-items:center;gap:7px;transition:.15s transform,.15s border-color,.15s background}.chip:hover{transform:translateY(-2px);border-color:#b1dec9}.chip[aria-pressed=true]{background:#dbf8e7;border-color:#3b9a77;color:#206e57;box-shadow:inset 0 0 0 1px #7ed2a9}.chip .emoji{font-size:19px}.mbti-wrap{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;margin-top:16px}.mbti-input{width:220px;max-width:100%;height:67px;border-radius:18px;text-transform:uppercase;text-align:center;letter-spacing:12px;text-indent:12px;font-size:29px;font-weight:900;color:#315a73;border:2px solid #cbdfe8;background:#f5fbff;box-shadow:inset 0 3px 8px #c1d2d11e}.mbti-input[aria-invalid=true]{border-color:#e89e8f;background:#fff6f2}.mbti-guide{display:flex;flex-wrap:wrap;gap:7px;max-width:580px}.mbti-guide span{font-size:13px;display:inline-flex;align-items:center;justify-content:center;border-radius:11px;background:#f0f4fb;color:#576e82;padding:9px 11px;font-weight:800}.hint{font-size:13px;color:#657d7d;margin:11px 0 0}.validation{font-size:13px;font-weight:800;color:#bb5b43;min-height:22px;margin:7px 0 0}.validation.ok{color:#248064}.btn-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:24px 0 0}.btn{border:0;border-radius:15px;font-size:16px;font-weight:900;padding:14px 24px;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:51px;transition:transform .16s,box-shadow .16s}.btn:not(:disabled):hover{transform:translateY(-2px)}.btn-primary{background:#277e65;color:#fff;box-shadow:0 8px 18px #35886d38}.btn-secondary{background:#fff;border:2px solid #cfe6d9;color:#2b745f}.btn-peach{background:#ffdcb9;color:#78512d}.promptline{text-align:center;font-size:14px;color:#78908f;margin:9px 0 0}
+.reco-top{text-align:center;max-width:770px;margin:21px auto 23px}.reco-top h2{font-size:clamp(25px,4vw,34px);margin:8px 0 4px;letter-spacing:-1px}.reco-top p{color:#5d7779;margin:0}.mini-profile{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin:18px auto}.mini-profile span{background:#fff;border:1px solid #ddece8;border-radius:30px;padding:5px 12px;font-weight:800;font-size:13px;color:#507c70}.recommendations{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;max-width:900px;margin:0 auto}.job-card{background:white;border:2px solid #fff;border-radius:25px;box-shadow:var(--shadow);padding:21px 22px;text-align:left;min-height:193px;display:flex;flex-direction:column;gap:6px;transition:.2s transform,.2s border-color,.2s box-shadow}.job-card:hover{transform:translateY(-4px);border-color:#addfc6;box-shadow:0 14px 34px #68a78e31}.job-card:focus-visible{outline:3px solid #f4a969}.job-card .job-head{display:flex;gap:14px;align-items:center}.job-icon{width:59px;height:59px;background:#edfaf3;border-radius:20px;display:grid;place-items:center;font-size:31px;flex-shrink:0}.job-card:nth-child(4n+2) .job-icon{background:#fff2d5}.job-card:nth-child(4n+3) .job-icon{background:#eef0ff}.job-card:nth-child(4n+4) .job-icon{background:#ffe9e8}.job-category{font-size:12px;font-weight:800;color:#568d7b}.job-card h3{font-size:19px;letter-spacing:-.5px;margin:0}.job-card .doing{font-size:14px;color:#587172;line-height:1.5;margin:5px 0}.job-card .why{margin-top:auto;display:flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:#307d69;background:#edf9f2;padding:7px 11px;border-radius:11px;width:fit-content}.job-card .more{display:flex;align-items:center;justify-content:flex-end;gap:4px;margin-top:3px;font-size:13px;font-weight:900;color:#34836b}.reroll-note{margin-top:18px;text-align:center;font-size:13px;color:#718a88}
+.detail-panel{max-width:870px;margin:0 auto;background:#fffdfc;border:2px solid #fff;box-shadow:var(--shadow);border-radius:30px;overflow:hidden}.detail-banner{padding:29px 32px;background:linear-gradient(105deg,#dcf8e5,#e8f4ff);display:flex;align-items:center;gap:20px}.detail-banner .job-icon{width:88px;height:88px;font-size:48px;background:#fff;border-radius:27px}.detail-banner h2{font-size:31px;letter-spacing:-1px;margin:3px 0}.detail-banner .category{color:#39816e;font-size:13px;font-weight:900}.detail-banner .subtitle{font-size:14px;margin:0;color:#607a77}.details-content{padding:27px 32px 16px}.work-item{display:grid;grid-template-columns:163px 1fr;gap:18px;padding:17px 0;border-bottom:1px dashed #dbe8e4}.work-item:last-child{border-bottom:none}.work-label{font-size:15px;font-weight:900;color:#2e806e;display:flex;gap:10px;align-items:flex-start;line-height:1.5}.label-round{width:26px;height:26px;flex:0 0 26px;border-radius:50%;display:grid;place-items:center;background:#ddf7e8;font-size:13px;color:#278065}.work-text{font-size:15px;line-height:1.9;color:#3d5556;font-weight:600}.work-text strong{color:#365a59}.inline-mini{font-size:13px;color:#647d7d}.info-note{margin:10px 30px 26px;padding:12px 15px;border-radius:15px;background:#f5f8f6;font-size:13px;color:#607a74}.detail-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:23px 0 15px}
+.footer{padding:10px 14px 33px;text-align:center;color:#708483;font-size:13px}.footer strong{color:#3c8070}.footer p{margin:6px 0}.toast{position:fixed;bottom:30px;left:50%;transform:translate(-50%,30px);z-index:9;background:#315b52;color:white;font-weight:800;padding:13px 20px;border-radius:20px;box-shadow:0 10px 30px #2e605655;opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+[hidden]{display:none!important}
+@media(max-width:720px){.container{width:min(100% - 24px,1060px)}.hero{min-height:205px;padding:28px 20px;grid-template-columns:1fr .3fr;margin-top:14px}.hero-art .circle{width:105px;height:105px;right:-12px;top:14px}.hero-art .plant{font-size:76px;right:2px;top:9px}.hero-art .ball{right:-15px;top:85px;font-size:33px}.hero-art .spark{right:88px;top:2px;font-size:23px}.hero-art .spark2{right:-3px;top:0;font-size:18px}.hero p{font-size:14px}.hero h1{font-size:28px}.progress{gap:4px}.progress .bar{width:14px}.progress .pstep{font-size:12px;padding:6px 9px}.question-card{padding:21px 17px;border-radius:21px}.card-head h3{font-size:17px}.helper{margin-left:0}.chip{font-size:13px;padding:8px 10px}.recommendations{grid-template-columns:1fr}.job-card{min-height:165px}.detail-banner{padding:21px 18px}.detail-banner .job-icon{width:68px;height:68px;font-size:37px}.detail-banner h2{font-size:24px}.details-content{padding:18px 18px 9px}.work-item{grid-template-columns:1fr;gap:5px;padding:14px 0}.work-text{padding-left:36px}.info-note{margin:10px 16px 20px}.extra-sources{padding:15px}.mbti-input{width:200px}}
+@media print{html,body{background:#fff!important}.hero,.progress,.footer,.btn-row,.detail-actions,.reco-top,.recommendations,.info-note,.extra-sources,.reroll-note,.toast{display:none!important}.container{width:100%;margin:0}.stage{padding:0}#formStage,#recommendStage{display:none!important}#detailStage{display:block!important}.detail-panel{box-shadow:none;border:1px solid #999;border-radius:0}.detail-banner{background:#f2f2f2!important;print-color-adjust:exact}.work-item{break-inside:avoid}.details-content{padding:20px}body{font-size:13px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* 학생이 원하는 직업 직접 찾기 — 모든 검색은 이 HTML 안의 자료만 사용합니다. */
+.custom-search{max-width:900px;margin:6px auto 26px;border:2px solid #bfe9d2;background:linear-gradient(125deg,#f7fff8,#effafc 75%,#fff8eb);border-radius:27px;padding:25px 27px;box-shadow:var(--shadow)}
+.custom-search h3{margin:3px 0 5px;font-size:22px;letter-spacing:-.65px}.custom-search p{font-size:14px;color:#5d7975;margin:0 0 12px}.custom-tag{background:#fff2cc;border-radius:99px;font-size:12px;font-weight:900;color:#75602f;padding:4px 11px;display:inline-block}.custom-form{display:flex;gap:10px;align-items:stretch;margin-top:11px}.custom-form input{min-width:0;flex:1;border:2px solid #cce5d8;border-radius:14px;padding:11px 14px;min-height:52px;background:#fff;color:#2b4e50;font-weight:700}.custom-form input::placeholder{color:#98aba9;font-weight:500}.custom-form .btn{white-space:nowrap}.search-msg{min-height:23px;margin:10px 0 0!important;font-size:13px!important;font-weight:800;color:#577b69!important}.search-msg.error{color:#bc5743!important}.search-msg.warning{color:#a66c2f!important}.custom-examples{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:10px;font-size:12px;color:#68847c}.custom-examples button{font-size:12px;font-weight:800;color:#417e6c;background:#fff;border:1px solid #d5e9dc;border-radius:99px;padding:6px 10px}.custom-examples button:hover{background:#e2f7e9}.search-matches{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.search-matches button{padding:9px 13px;background:white;border:2px solid #bfe6d7;color:#367562;font-size:13px;font-weight:800;border-radius:12px}.search-matches button:hover{background:#e5f8ed}.reco-divider{text-align:center;font-size:13px;color:#6c8b87;display:flex;align-items:center;gap:12px;justify-content:center;margin:0 auto 20px;max-width:900px;font-weight:800}.reco-divider:before,.reco-divider:after{content:"";height:1px;background:#c8e0d8;flex:1}
+@media(max-width:720px){.custom-search{padding:21px 16px;border-radius:21px}.custom-search h3{font-size:19px}.custom-form{flex-direction:column}.custom-form input,.custom-form button{width:100%}}
+@media print{.custom-search,.reco-divider{display:none!important}}
+</style>
+</head>
+<body>
+<main class="container">
+  <header class="hero">
+    <div class="hero-copy"><div class="hero-mini">🌿 6학년 실과 · 나의 진로 발달 계획</div><h1>나의 꿈을 찾는<br><span>직업 탐험 여행!</span></h1><p>나의 흥미·적성·성격을 알려 주면, 관심을 가져볼 직업을 추천해 줄게요. ✨</p></div>
+    <div class="hero-art" aria-hidden="true"><span class="circle"></span><span class="plant">🌳</span><span class="ball">🔎</span><span class="spark">✨</span><span class="spark2">⭐</span></div>
+  </header>
+  <nav class="progress" aria-label="탐험 진행 단계"><span id="p1" class="pstep active" aria-current="step">① 나 알아보기</span><span class="bar"></span><span id="p2" class="pstep">② 직업 추천</span><span class="bar"></span><span id="p3" class="pstep">③ 직업 조사</span></nav>
+
+  <section class="stage" id="formStage" aria-labelledby="formTitle">
+    <div class="section-intro"><h2 id="formTitle">🌼 1. 나의 유형을 알려 줘!</h2><p>앞서 검사한 결과를 바탕으로 골라 보세요. 정답이나 오답은 없어요.</p></div>
+    <div class="question-card" id="interestSection"><div class="card-head"><span class="num">1</span><h3>나의 흥미 유형</h3><span class="count" id="interestCount">0 / 최대 3개</span></div><p class="helper">좋아하고 관심이 가는 유형을 1~3개 선택하세요.</p><div class="chips" id="interestChips" role="group" aria-label="흥미 유형 선택"></div></div>
+    <div class="question-card" id="aptitudeSection"><div class="card-head"><span class="num">2</span><h3>나의 적성 유형</h3><span class="count" id="aptitudeCount">0 / 최대 3개</span></div><p class="helper">내가 잘하거나 잘할 수 있을 것 같은 유형을 1~3개 선택하세요.</p><div class="chips" id="aptitudeChips" role="group" aria-label="적성 유형 선택"></div></div>
+    <div class="question-card" id="personalitySection"><div class="card-head"><span class="num">3</span><h3>나의 성격 유형 (MBTI)</h3></div><p class="helper">영어 글자 4개만 입력해 주세요. 소문자로 써도 자동으로 대문자가 돼요.</p><div class="mbti-wrap"><div><label class="sr-only" for="mbtiInput">MBTI 네 글자 입력</label><input class="mbti-input" id="mbtiInput" type="text" maxlength="4" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="mbtiRules mbtiStatus" placeholder="ENFP" inputmode="latin" aria-invalid="false"><div class="validation" id="mbtiStatus" role="status" aria-live="polite"></div></div><div><div class="mbti-guide" id="mbtiRules"><span>첫 글자 E / I</span><span>둘째 S / N</span><span>셋째 F / T</span><span>넷째 J / P</span></div><p class="hint">예시: ENFP, ISTJ, INTP · 한글 및 다른 글자는 입력할 수 없어요.</p></div></div></div>
+    <div class="btn-row"><button type="button" id="findJobsBtn" class="btn btn-primary">✨ 나에게 어울릴 직업 찾아보기</button></div><p class="promptline" id="formHelper" aria-live="polite">흥미·적성을 각각 1개 이상 고르고, 성격 유형 4글자를 입력해 주세요.</p>
+  </section>
+
+  <section class="stage" id="recommendStage" aria-labelledby="recommendTitle" hidden>
+    <div class="reco-top"><div class="hero-mini">🌟 추천은 가능성을 발견하는 힌트!</div><h2 id="recommendTitle">이 직업을 찾아보는 건 어떨까?</h2><p>관심이 가는 직업을 눌러 자세히 살펴보세요. 꼭 추천 목록에만 진로를 맞출 필요는 없어요.</p><div class="mini-profile" id="profileSummary"></div></div>
+    <aside class="custom-search" aria-labelledby="customSearchTitle">
+      <span class="custom-tag">🌈 직접 고르는 나의 꿈</span>
+      <h3 id="customSearchTitle">하고 싶은 직업이 따로 있나요?</h3>
+      <p>추천 목록에 없어도 괜찮아요! 직업 이름을 직접 입력해 보세요. 등록된 약 500개 직업과 자주 쓰는 이름이라면 활동지에 쓸 내용을 바로 보여 줄게요. 직업이 아닌 단어는 검색할 수 없어요.</p>
+      <form class="custom-form" id="customJobForm" autocomplete="off">
+        <label class="sr-only" for="customJobInput">내가 궁금한 직업 이름 입력</label>
+        <input id="customJobInput" name="job" type="text" placeholder="예: 소방관, 유튜버, 축구 선수" maxlength="30" spellcheck="false" aria-describedby="customJobMessage" required>
+        <button class="btn btn-primary" type="submit" id="customSearchBtn">🔍 이 직업 알아보기</button>
+      </form>
+      <p id="customJobMessage" class="search-msg" role="status" aria-live="polite">💚 다른 사이트로 이동하지 않고, 이 화면 안에서만 직업을 찾아봐요.</p>
+      <div class="search-matches" id="customJobMatches" aria-label="검색된 관련 직업" hidden></div>
+      <div class="custom-examples"><span>이런 직업도 찾아보세요!</span><button type="button" data-example="소방관">🚒 소방관</button><button type="button" data-example="유튜버">📹 유튜버</button><button type="button" data-example="프로게이머">🕹️ 프로게이머</button><button type="button" data-example="아이돌">🌟 아이돌</button></div>
+    </aside>
+    <div class="reco-divider">또는 추천 직업 5개 중에서 골라 보세요 ✨</div>
+    <div class="recommendations" id="jobCards" aria-live="polite"></div>
+    <div class="btn-row"><button type="button" class="btn btn-peach" id="rerollBtn">🔄 다시 추천해줘! (다른 직업 5개)</button><button type="button" class="btn btn-secondary" id="changeBtn">✏️ 나의 유형 다시 고르기</button></div><p class="reroll-note" id="recommendInfo" aria-live="polite"></p>
+  </section>
+
+  <section class="stage" id="detailStage" aria-labelledby="detailTitle" hidden>
+    <div class="section-intro"><h2>📝 2. 관심 직업 탐색하기</h2><p>활동지의 2단계 칸에 아래 내용을 차근차근 옮겨 적어 보세요!</p></div>
+    <div class="detail-panel" id="detailPrintable"><div class="detail-banner"><div class="job-icon" id="detailEmoji" aria-hidden="true">🌻</div><div><div class="category" id="detailCategory"></div><h2 id="detailTitle"></h2><p class="subtitle">내가 알아보고 싶은 관심 직업</p></div></div><div class="details-content" id="detailContent"></div><p class="info-note">💛 알아 두기: 표시된 관련 유형은 참고 예시일 뿐이에요. 어떤 성격 유형이든 관심과 노력에 따라 이 직업에 도전할 수 있어요. 직업의 전망과 자격 요건은 나중에 달라질 수 있어요.</p></div>
+    <div class="detail-actions"><button type="button" class="btn btn-secondary" id="backToJobsBtn">← 다른 직업 살펴보기</button><button type="button" class="btn btn-secondary" id="copyBtn">📋 5가지 내용 복사하기</button><button type="button" class="btn btn-primary" id="printBtn">🖨️ 조사 내용 인쇄하기</button></div>
+  </section>
+</main>
+<footer class="footer"><strong>🌳 꿈을 키우는 진로 숲</strong><p>이 자료는 6학년 실과 수업을 돕기 위한 진로 탐색 활동이에요. 점수나 MBTI가 나의 미래를 정하지 않아요.</p><p>선택한 유형은 이 화면에서만 사용하며 서버로 전송하지 않아요. · 직업 정보는 초등학생의 눈높이에 맞게 요약한 참고 자료예요.</p></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+'use strict';
+const INTERESTS=[
+ {id:'C',name:'관습형',emoji:'🗂️',desc:'정리와 계획'},
+ {id:'R',name:'현실형',emoji:'🛠️',desc:'직접 만들기'},
+ {id:'I',name:'탐구형',emoji:'🔍',desc:'관찰과 연구'},
+ {id:'A',name:'예술형',emoji:'🎨',desc:'상상과 표현'},
+ {id:'S',name:'사회형',emoji:'🤝',desc:'사람 돕기'},
+ {id:'E',name:'진취형',emoji:'🚀',desc:'기획과 도전'}
+];
+const APTITUDES=[
+ {id:'M',name:'신체 운동',emoji:'⚽'}, {id:'H',name:'손 재능',emoji:'🧶'},
+ {id:'V',name:'공간 시각',emoji:'🧩'}, {id:'L',name:'수리 논리',emoji:'🔢'},
+ {id:'C',name:'창의력',emoji:'💡'}, {id:'Q',name:'자기 성찰',emoji:'🌿'},
+ {id:'U',name:'음악',emoji:'🎵'}, {id:'G',name:'언어',emoji:'🗣️'},
+ {id:'N',name:'자연 친화',emoji:'🌳'}, {id:'P',name:'대인 관계',emoji:'💞'},
+ {id:'A',name:'예술 시각',emoji:'🖌️'}
+];
+// 한글/기호/숫자를 표시하지 않고, 위치별로 지정된 영문자만 받아들입니다.
+const MBTI_PAIRS=['EI','SN','FT','JP'];
+const MBTI_RE=/^[EI][SN][FT][JP]$/;
+const RAW_JOBS=String.raw`초등학교 교사|📚|교육·상담|어린이에게 여러 과목을 가르치고 즐겁고 안전한 교실을 만든다.|초등교육과|초등학교 정교사 자격 필요|S,E|G,P,C|ENFJ,INFJ,ESFJ,ISFJ|배움의 방법이 바뀌어도 학생의 성장을 돕는 교사의 역할은 중요하다.
+특수교육 교사|🌈|교육·상담|학생의 특성에 맞게 수업과 생활을 지원하여 함께 배울 수 있도록 돕는다.|특수교육과·초등특수교육과|특수학교 정교사 자격 필요|S,I|P,G,Q|ENFJ,ISFJ,INFJ,ESFJ|맞춤형 교육과 포용적 학교를 만드는 일이 계속 중요해질 수 있다.
+유치원 교사|🧸|교육·상담|어린이의 놀이와 생활을 도우며 다양한 배움 활동을 이끈다.|유아교육과|유치원 정교사 자격 필요|S,A|P,G,C|ESFJ,ENFP,ISFJ,ENFJ|아이들의 놀이와 발달을 돕는 전문성이 꾸준히 필요하다.
+진로상담 전문가|🧭|교육·상담|사람이 자신의 강점을 발견하고 진로를 계획하도록 대화로 돕는다.|상담심리학과·교육학과|관련 상담 자격과 현장 경험이 도움이 된다|S,I|P,Q,G|INFJ,ENFJ,INFP,ESFJ|직업의 종류가 달라질수록 진로 탐색을 돕는 역할도 중요하다.
+청소년상담사|💬|교육·상담|청소년의 고민을 듣고 건강한 성장과 문제 해결을 돕는다.|심리학과·상담학과|청소년상담사 등 관련 자격이 도움이 된다|S,I|P,Q,G|INFJ,ENFJ,ISFJ,INFP|마음 건강과 청소년 지원에 대한 관심이 이어질 수 있다.
+도서관 사서|📖|교육·상담|책과 정보를 정리하고 사람들에게 알맞은 자료를 찾아준다.|문헌정보학과|정사서·준사서 자격 등 확인|C,S|G,L,P|ISTJ,ISFJ,INTJ,INFJ|전자책과 디지털 자료를 안내하는 역량도 중요해질 수 있다.
+박물관 교육사|🏛️|교육·상담|박물관 전시를 활용하여 어린이와 방문객에게 배움 프로그램을 제공한다.|역사교육과·박물관학 관련 학과|관련 교육 경험이 도움이 된다|S,A,I|G,P,C|ENFP,ENFJ,INFJ,ISFJ|체험형 문화교육의 가치가 계속 주목받을 수 있다.
+과학 교육 콘텐츠 기획자|🔬|교육·상담|어려운 과학 개념을 재미있는 실험과 영상, 학습 자료로 만든다.|과학교육과·과학 관련 학과|필수 자격은 직무에 따라 다르다|I,A,S|C,G,L|ENTP,ENFP,INTP,INFJ|디지털 학습자료와 체험형 과학 교육 분야에서 활동할 수 있다.
+교육 프로그램 기획자|📝|교육·상담|학생이 즐겁게 배울 수 있는 수업과 체험 프로그램을 설계한다.|교육학과·교육공학과|기획 경험과 교육 관련 학습이 도움 된다|S,E,A|C,P,G|ENFJ,ENTP,ENFP,INFJ|온라인과 오프라인을 결합한 다양한 교육이 늘어날 수 있다.
+놀이·체험 활동 지도자|🎲|교육·상담|어린이와 청소년이 놀이와 체험으로 배우도록 활동을 진행한다.|청소년학과·체육교육과|청소년지도사 등 관련 자격이 도움이 된다|S,R,A|M,P,C|ENFP,ESFP,ENFJ,ISFP|협력과 소통을 직접 경험하는 체험 활동의 필요성이 이어질 수 있다.
+소프트웨어 개발자|💻|컴퓨터·기술|사람들에게 필요한 컴퓨터 프로그램을 계획하고 코드를 작성한다.|컴퓨터공학과·소프트웨어학과|필수 면허는 없으며 코딩 실력이 중요하다|I,R,C|L,C,V|INTP,INTJ,ENTP,ISTJ|AI와 새로운 기술이 발전하면서 문제 해결과 프로그램 설계 능력이 중요하다.
+앱 개발자|📱|컴퓨터·기술|휴대전화나 태블릿에서 쓰는 편리한 앱을 만든다.|소프트웨어학과·컴퓨터공학과|프로그래밍 프로젝트 경험이 도움 된다|I,A,R|L,C,V|ENTP,INTP,ENFP,INTJ|생활 속 디지털 서비스가 다양해지며 새로운 앱 아이디어가 필요할 수 있다.
+게임 개발자|🎮|컴퓨터·기술|즐겁고 교육적인 게임의 규칙과 프로그램을 구현한다.|게임공학과·컴퓨터공학과|프로그래밍과 협업 경험이 도움 된다|I,A,R|C,L,V|INTP,ENTP,INFP,INTJ|게임 기술이 교육과 체험에도 쓰이며 새로운 콘텐츠 기회가 생긴다.
+웹 서비스 기획자|🧩|컴퓨터·기술|웹사이트에서 어떤 기능이 필요할지 조사하고 이용 방법을 설계한다.|컴퓨터공학과·경영학과|서비스 기획 경험과 의사소통 능력이 도움 된다|E,I,S|C,P,G|ENTP,ENFJ,INTJ,ENFP|이용자에게 편리한 디지털 서비스를 설계하는 능력이 중요해진다.
+UX·UI 디자이너|🎨|컴퓨터·기술|앱과 웹사이트를 누구나 쉽고 편리하게 사용하도록 화면을 설계한다.|시각디자인과·디지털미디어학과|디자인 도구와 작품집이 도움 된다|A,I,S|A,C,V|INFP,ENFP,INTJ,ISFP|접근성과 사용 편의성을 높이는 디자인의 중요성이 커질 수 있다.
+인공지능 연구원|🤖|컴퓨터·기술|컴퓨터가 자료를 학습하고 사람을 도울 방법을 연구한다.|인공지능학과·컴퓨터공학과|수학·프로그래밍·연구 역량이 중요하다|I,R|L,C,Q|INTP,INTJ,ENTP,ISTJ|AI 기술이 넓게 활용되며 안전하고 책임 있는 개발이 중요해진다.
+데이터 분석가|📊|컴퓨터·기술|많은 자료에서 규칙을 찾아 사람들이 판단할 수 있게 설명한다.|통계학과·데이터사이언스학과|통계·프로그래밍 공부가 도움 된다|I,C|L,G,Q|INTJ,INTP,ISTJ,ENTJ|여러 분야에서 자료를 정확히 해석하는 능력이 필요할 수 있다.
+정보보안 전문가|🛡️|컴퓨터·기술|컴퓨터와 개인정보를 안전하게 지킬 방법을 설계하고 점검한다.|정보보호학과·컴퓨터공학과|정보보안 관련 자격과 실습이 도움 된다|I,C,R|L,Q,C|INTJ,ISTJ,INTP,ENTP|디지털 생활이 넓어질수록 개인정보 보호와 안전 기술이 중요하다.
+로봇공학자|🦾|컴퓨터·기술|사람을 도울 로봇의 움직임과 기능을 설계하고 실험한다.|로봇공학과·기계공학과|수학·코딩·제작 경험이 도움 된다|R,I|V,L,H|INTP,ISTP,ENTP,INTJ|돌봄·제조·생활 지원 등에서 로봇의 활용이 확대될 수 있다.
+사물인터넷 개발자|🌐|컴퓨터·기술|사물과 센서를 연결해 편리하고 안전한 시스템을 만든다.|전자공학과·정보통신공학과|프로그래밍과 전자회로 공부가 도움 된다|I,R|L,H,V|INTP,ISTP,INTJ,ENTP|집과 도시의 여러 장치를 연결하는 기술 수요가 이어질 수 있다.
+3D 프린팅 전문가|🖨️|컴퓨터·기술|컴퓨터로 물건을 설계하고 3D 프린터로 모형이나 부품을 만든다.|기계공학과·산업디자인과|3D 설계와 출력 실습이 도움 된다|R,A,I|H,V,C|ISTP,ISFP,INTP,ENTP|맞춤형 제작과 빠른 시제품 개발 분야에 쓰일 수 있다.
+드론 기술자|🚁|컴퓨터·기술|드론을 점검하고 촬영·측량·환경 관찰에 활용한다.|항공공학과·드론 관련 학과|드론 조종 관련 자격은 업무에 따라 필요하다|R,I|V,M,L|ISTP,ESTP,INTP,ISTJ|농업과 환경 관찰 등 안전한 드론 활용 분야가 넓어질 수 있다.
+스마트팜 기술자|🌱|컴퓨터·기술|센서와 컴퓨터로 작물이 잘 자라는 온도와 물의 양을 관리한다.|스마트팜학과·농업공학과|농업·센서·컴퓨터 관련 공부가 도움 된다|R,I,C|N,L,H|ISTJ,INTJ,ISTP,ISFJ|기후와 식량 문제에 대응하는 똑똑한 농업 기술이 중요해진다.
+소아청소년과 의사|🩺|건강·돌봄|어린이와 청소년의 건강을 살피고 아플 때 치료를 돕는다.|의예과·의학과|의사 면허와 관련 전문 수련 필요|S,I|P,L,Q|ISFJ,ENFJ,INFJ,ISTJ|아이들의 건강과 예방 진료를 돕는 전문성은 계속 중요하다.
+간호사|💗|건강·돌봄|환자의 건강 상태를 살피고 치료와 회복을 돕는다.|간호학과|간호사 면허 필요|S,R|P,Q,H|ISFJ,ESFJ,ENFJ,ISTJ|고령화와 건강 관리의 변화 속에서 전문적인 돌봄이 중요하다.
+약사|💊|건강·돌봄|약을 안전하게 조제하고 올바른 복용법을 알려준다.|약학과|약사 면허 필요|I,S,C|L,P,Q|ISTJ,ISFJ,INTJ,INFJ|약의 안전한 사용과 개인에 맞는 약물 상담의 역할이 이어진다.
+물리치료사|🦵|건강·돌봄|움직임이 불편한 사람이 몸을 더 편안하게 움직이도록 운동과 치료를 돕는다.|물리치료학과|물리치료사 면허 필요|S,R|M,P,H|ESFJ,ISFJ,ESTP,ENFJ|건강한 움직임과 회복을 돕는 서비스의 필요성이 이어질 수 있다.
+작업치료사|🧠|건강·돌봄|사람이 일상생활에 필요한 활동을 다시 잘할 수 있도록 훈련을 돕는다.|작업치료학과|작업치료사 면허 필요|S,R,A|P,H,C|ISFJ,ENFJ,ISFP,ESFJ|다양한 연령의 생활 자립을 돕는 재활 분야에서 활동한다.
+언어재활사|🗣️|건강·돌봄|말이나 의사소통이 어려운 사람이 더 잘 표현하도록 돕는다.|언어치료학과·언어재활학과|언어재활사 국가자격 확인|S,I|G,P,Q|INFJ,ENFJ,ISFJ,INFP|의사소통을 돕는 맞춤형 지원의 중요성이 이어질 수 있다.
+영양사|🥗|건강·돌봄|사람이 건강하게 먹도록 식단을 계획하고 식생활을 안내한다.|식품영양학과|영양사 면허 필요|S,C,I|N,L,P|ISFJ,ISTJ,ESFJ,INTJ|건강한 식생활과 맞춤형 영양 관리의 중요성이 이어진다.
+치과위생사|🦷|건강·돌봄|치아와 잇몸 건강을 지키도록 예방 관리와 진료 보조를 한다.|치위생학과|치과위생사 면허 필요|S,R,C|H,P,Q|ISFJ,ESFJ,ISTJ,ENFJ|예방 중심의 구강 관리가 꾸준히 필요할 수 있다.
+임상심리 전문가|🌿|건강·돌봄|심리 검사를 돕고 마음 건강을 돌보는 방법을 연구하고 지원한다.|심리학과·임상심리 관련 대학원|업무에 따라 임상심리사 등 전문 자격 확인|S,I|Q,P,L|INFJ,INFP,INTJ,ISFJ|마음 건강에 대한 관심이 이어지며 전문 지식의 중요성이 커질 수 있다.
+수의사|🐾|동물·자연|동물의 건강을 살피고 질병을 예방하거나 치료한다.|수의예과·수의학과|수의사 면허 필요|I,S,R|N,H,P|ISFJ,INTP,INFJ,ISTJ|반려동물과 야생동물의 건강을 지키는 일이 중요하다.
+동물 행동 전문가|🐕|동물·자연|동물의 행동을 관찰하고 동물과 사람이 잘 지내는 방법을 알려준다.|동물자원학과·동물행동 관련 학과|동물 행동 교육과 현장 실습이 도움 된다|R,S,I|N,Q,P|ISFP,ISFJ,INFJ,ISTP|동물 복지와 올바른 반려 문화에 대한 관심이 이어질 수 있다.
+생태 복원 전문가|🦋|동물·자연|훼손된 자연을 조사하고 식물과 동물이 다시 살아갈 환경을 만든다.|환경공학과·생태학 관련 학과|환경 조사와 생태 관련 공부가 도움 된다|I,R,S|N,L,V|INFP,INTJ,ISFJ,INTP|자연 보호와 생물 다양성 회복이 중요해지며 관련 활동이 주목받는다.
+산림 전문가|🌲|동물·자연|숲의 나무와 생태계를 살피고 건강한 산림을 가꾸는 일을 한다.|산림자원학과·산림환경학과|산림기사 등 관련 자격이 도움 된다|R,I|N,M,L|ISTP,ISFP,INTJ,ISFJ|탄소 흡수와 숲 건강을 위한 관리의 필요성이 이어진다.
+조경 디자이너|🌷|동물·자연|학교와 공원 등 사람들이 쉬는 녹색 공간을 설계한다.|조경학과·환경디자인과|조경기사 등 관련 자격이 도움 된다|A,R,I|V,A,N|ISFP,INFP,INTJ,ENFP|기후에 적응하는 녹색 도시 공간의 중요성이 커질 수 있다.
+도시 농업 전문가|🍅|동물·자연|도시의 작은 공간에서 작물을 키우고 재배 방법을 알려준다.|원예학과·농업 관련 학과|도시농업관리사 등 관련 자격 확인|R,S|N,H,P|ISFJ,ISTP,ESFJ,ISFP|학교와 지역사회의 친환경 먹거리 교육에 참여할 수 있다.
+원예 전문가|🪴|동물·자연|꽃과 식물을 키우고 건강하게 자라도록 관리한다.|원예학과·식물자원학과|원예·조경 관련 자격이 도움 된다|R,A|N,H,A|ISFP,ISFJ,ISTP,INFP|녹색 생활 공간과 식물 돌봄에 대한 관심이 이어질 수 있다.
+해양 생물 연구원|🐬|과학·환경|바닷속 동식물을 조사하고 해양 생태계를 보호할 방법을 찾는다.|해양생물학과·생명과학과|과학 연구와 현장 조사 경험이 중요하다|I,R|N,L,Q|INTP,INTJ,ISFP,INFJ|바다 환경과 생물 다양성 문제를 연구하는 역할이 중요하다.
+생명과학 연구원|🧬|과학·환경|생물이 살아가는 원리를 실험하고 새로운 사실을 발견한다.|생명과학과·생명공학과|실험과 연구 경험이 중요하다|I,R|L,N,Q|INTP,INTJ,INFJ,ISTJ|생명과학과 건강·환경 기술이 발전하면서 연구 기회가 이어진다.
+식물학자|🌻|과학·환경|식물의 종류와 자라는 환경을 관찰하고 연구한다.|식물학 관련 학과·생명과학과|식물 조사와 연구 경험이 중요하다|I,R|N,Q,L|INTP,INFP,INTJ,ISFJ|생물 다양성과 생태계 변화 연구의 가치가 높아질 수 있다.
+천문학자|🔭|과학·환경|별과 행성, 우주에서 일어나는 현상을 관측하고 연구한다.|천문우주학과·물리학과|과학·수학 연구 역량이 중요하다|I,R|L,V,Q|INTP,INTJ,ENTP,INFJ|관측 기술이 발전하면서 새로운 우주 연구가 계속될 수 있다.
+기상 연구원|⛅|과학·환경|날씨 자료를 살펴보고 기상 현상을 더 정확히 이해하도록 연구한다.|대기과학과·기상학 관련 학과|기상 관련 전문 공부와 연구 경험이 중요하다|I,C|L,N,Q|INTJ,INTP,ISTJ,INFJ|극한 날씨에 대비하는 정확한 기상 정보가 중요해진다.
+기후변화 연구원|🌏|과학·환경|기후가 어떻게 달라지는지 조사하고 대응 방법을 연구한다.|환경과학과·대기과학과|자료 분석과 환경 연구 경험이 도움 된다|I,S|N,L,G|INTJ,INFJ,INTP,ENFJ|기후변화에 대응하는 여러 분야에서 과학적 분석이 필요하다.
+환경공학 기술자|♻️|과학·환경|물과 공기 등을 깨끗하게 지키는 기술을 설계하고 관리한다.|환경공학과|환경기사 등 관련 자격이 도움 된다|I,R,C|L,N,H|INTJ,ISTJ,INTP,ISTP|오염 예방과 자원 순환 기술의 중요성이 이어질 수 있다.
+재생에너지 연구원|☀️|과학·환경|햇빛과 바람 같은 에너지를 효율적으로 사용하는 방법을 연구한다.|에너지공학과·전기공학과|과학·설계·실험 역량이 중요하다|I,R|L,V,N|INTJ,INTP,ENTP,ISTP|깨끗한 에너지 전환을 위한 연구가 계속될 수 있다.
+식품 연구원|🧪|과학·환경|맛있고 안전하며 영양 있는 식품을 개발하고 시험한다.|식품공학과·식품영양학과|식품 관련 연구와 실험 역량이 도움 된다|I,R,A|N,L,C|INTP,ISTJ,ISFP,ENTP|건강과 지속가능한 식품 개발에 대한 관심이 이어질 수 있다.
+화학 연구원|⚗️|과학·환경|물질의 성질을 실험하고 생활에 도움이 되는 새로운 재료를 연구한다.|화학과·화학공학과|실험 안전 교육과 연구 역량이 중요하다|I,R|L,Q,H|INTP,INTJ,ISTJ,ENTP|친환경 소재와 다양한 생활 기술 개발에 기여할 수 있다.
+지질 연구원|🪨|과학·환경|땅과 암석을 조사하여 지구의 역사와 변화를 알아낸다.|지질학과·지구과학과|현장 조사와 자료 해석 능력이 도움 된다|I,R|N,L,V|INTP,ISTP,INTJ,ISFP|자연자원과 지구환경을 이해하는 연구의 중요성이 이어진다.
+농업 연구원|🌾|과학·환경|작물이 잘 자라는 방법과 환경에 좋은 농업 기술을 연구한다.|농학과·작물생명과학과|농업 연구와 실험 경험이 도움 된다|I,R|N,L,H|INTJ,ISFJ,ISTP,INTP|식량 문제와 기후 변화에 대응하는 농업 기술이 필요하다.
+우주공학자|🚀|과학·환경|인공위성과 우주탐사 장치를 설계하고 안전하게 작동하도록 연구한다.|항공우주공학과·기계공학과|수학·물리·설계 역량이 중요하다|I,R|L,V,C|INTJ,INTP,ENTP,ISTP|위성 통신과 우주 관측 기술의 발전에 참여할 기회가 생길 수 있다.
+일러스트레이터|🖌️|예술·창작|책과 안내문 등에 들어가는 그림을 그려 내용을 알기 쉽게 전한다.|시각디자인과·일러스트 관련 학과|그림 실력과 작품집이 도움 된다|A,S|A,C,V|INFP,ISFP,ENFP,INFJ|디지털 그림과 다양한 교육·출판 콘텐츠에 참여할 수 있다.
+웹툰 작가|📚|예술·창작|그림과 이야기로 재미있고 따뜻한 만화를 만든다.|만화애니메이션학과·문예창작과|스토리 구성과 그림 연습이 중요하다|A,E|A,C,G|INFP,ENFP,ISFP,ENTP|온라인 만화 형식이 다양해지며 창작 역량의 가치가 이어진다.
+동화 작가|🧚|예술·창작|어린이가 상상하고 공감할 수 있는 이야기를 쓴다.|문예창작과·국어국문학과|글쓰기 연습과 작품 활동이 중요하다|A,S|G,C,Q|INFP,INFJ,ENFP,ISFJ|종이책·전자책·오디오북 등 이야기의 형태가 다양해진다.
+애니메이터|🎞️|예술·창작|그림이나 캐릭터가 자연스럽게 움직이는 영상을 만든다.|애니메이션학과·영상디자인과|그림과 애니메이션 제작 기술이 도움 된다|A,R,I|A,V,C|INFP,ISFP,ENTP,INTP|애니메이션 기술이 교육과 영상 콘텐츠에도 널리 쓰인다.
+캐릭터 디자이너|🐣|예술·창작|사람들의 마음에 남는 귀여운 캐릭터의 모습과 표정을 만든다.|캐릭터디자인과·시각디자인과|드로잉과 작품집이 도움 된다|A,E|A,C,V|ENFP,INFP,ISFP,ENTP|캐릭터는 책·게임·학습자료 등 여러 매체에서 활용된다.
+영상 편집자|🎬|예술·창작|촬영한 영상과 소리를 알맞게 이어 붙여 이야기를 전달한다.|영상학과·미디어콘텐츠학과|편집 프로그램 활용과 작품집이 도움 된다|A,R|V,C,U|ISFP,INFP,INTP,ENFP|영상 활용이 늘며 편집과 이야기 구성 능력이 필요하다.
+사진작가|📸|예술·창작|사람과 자연의 아름다운 순간을 사진으로 기록한다.|사진학과·영상학과|촬영 연습과 작품집이 도움 된다|A,R|A,V,Q|ISFP,INFP,ENFP,ISTP|사진은 기록·홍보·예술 등 다양한 곳에서 활용된다.
+패션 디자이너|👗|예술·창작|사람들이 편하게 입고 자신을 표현할 옷을 디자인한다.|패션디자인과·의류학과|의상 제작 연습과 작품집이 도움 된다|A,E,R|A,C,H|ENFP,ISFP,INFP,ENTP|친환경 소재와 다양한 사람을 고려한 옷 디자인이 중요해진다.
+제품 디자이너|🪑|예술·창작|생활 속 물건을 편리하고 보기 좋게 사용할 수 있도록 설계한다.|산업디자인과·제품디자인과|3D 모델링과 작품집이 도움 된다|A,R,I|V,A,C|INTJ,ISFP,ENTP,INFP|친환경 제품과 모두에게 편리한 디자인 수요가 이어질 수 있다.
+무대 디자이너|🎭|예술·창작|공연의 배경과 소품을 설계해 무대 위 이야기를 살린다.|무대미술과·공간디자인과|설계·제작 경험과 작품집이 도움 된다|A,R|V,A,H|ISFP,ENFP,INFP,ENTP|공연과 체험 전시가 다양해지며 공간 연출 기술이 활용된다.
+작곡가|🎼|예술·창작|노래나 영화, 게임에 들어가는 새로운 음악을 만든다.|작곡과·실용음악과|음악 이론과 창작 연습이 중요하다|A,I|U,C,Q|INFP,ISFP,INTP,ENFP|영상과 게임 등 다양한 콘텐츠에서 새로운 음악이 필요하다.
+악기 연주자|🎻|예술·창작|악기로 음악을 연주해 사람들에게 감동과 즐거움을 전한다.|기악과·실용음악과|꾸준한 연습과 공연 경험이 중요하다|A,S|U,Q,M|ISFP,INFP,ENFP,ESFP|공연과 교육 등 다양한 방식으로 음악을 나눌 수 있다.
+사운드 디자이너|🎧|예술·창작|영상이나 게임에 어울리는 소리와 효과음을 만들고 조절한다.|음향제작과·실용음악과|녹음·음향편집 기술이 도움 된다|A,I,R|U,C,L|INTP,ISFP,INFP,ENTP|몰입감 있는 디지털 콘텐츠에 소리 디자인이 활용된다.
+출판 편집자|📰|예술·창작|좋은 글과 그림을 골라 읽기 편한 책으로 완성한다.|국어국문학과·문예창작과|글 다듬기와 편집 경험이 도움 된다|A,C,S|G,Q,C|INFJ,ISTJ,INFP,ISFJ|종이책과 디지털 출판을 연결하는 기획력이 중요해진다.
+도예가|🏺|예술·창작|흙으로 그릇과 장식품을 빚고 구워 작품을 만든다.|도예과·공예디자인과|작품 제작 경험과 기술이 중요하다|A,R|H,A,C|ISFP,INFP,ISTP,ENFP|수공예의 개성과 지속가능한 생활용품에 대한 관심이 이어진다.
+공예 디자이너|🧵|예술·창작|천, 나무, 종이 등의 재료로 쓰임새 있는 작품을 만든다.|공예디자인과·산업디자인과|재료 다루기와 작품집이 도움 된다|A,R|H,A,C|ISFP,INFP,ISTP,ENFP|개성 있는 수공예 제품과 체험 프로그램에서 활동할 수 있다.
+안무가|💃|예술·창작|음악과 이야기에 어울리는 새로운 춤 동작을 만든다.|무용학과·실용무용과|춤 연습과 공연·창작 경험이 중요하다|A,S,R|M,C,U|ENFP,ESFP,ISFP,ENFJ|공연·영상·문화교육에서 움직임을 활용하는 기회가 있다.
+요리사|👩‍🍳|손기술·음식|음식 재료를 준비하고 사람들이 맛있게 먹을 요리를 만든다.|조리학과·외식조리과|조리기능사 자격이 도움이 된다|R,A,S|H,C,N|ISFP,ESFP,ISTP,ESFJ|건강한 식재료와 다양한 식문화에 대한 관심이 이어진다.
+제과제빵사|🥐|손기술·음식|빵과 과자를 만들고 새로운 맛과 모양을 연구한다.|제과제빵과·조리학과|제과·제빵기능사 자격이 도움 된다|R,A|H,C,A|ISFP,ISTP,ESFP,INFP|다양한 취향과 건강을 고려한 디저트 개발이 중요해질 수 있다.
+플로리스트|💐|손기술·음식|꽃과 식물을 조합해 선물이나 장식 공간을 아름답게 꾸민다.|화훼디자인과·원예학과|꽃 디자인 실습과 관련 자격이 도움 된다|A,R,S|N,A,H|ISFP,ENFP,ESFJ,INFP|꽃을 활용한 행사·공간 디자인 등에서 활동할 수 있다.
+가구 제작자|🪑|손기술·음식|나무와 여러 재료로 튼튼하고 편리한 가구를 만든다.|목공예과·가구디자인과|목공 기술과 안전 실습이 중요하다|R,A|H,V,C|ISTP,ISFP,INTP,ISTJ|오래 쓰는 맞춤형 가구와 친환경 소재의 가치가 높아질 수 있다.
+바리스타|☕|손기술·음식|차와 커피 등 여러 음료를 만들고 손님에게 안내한다.|식음료 관련 학과·호텔외식학과|음료 제조 실습과 서비스 경험이 도움 된다|R,S,A|H,P,C|ESFJ,ESFP,ISFP,ENFP|다양한 음료와 친절한 서비스가 중요한 분야에서 일한다.
+식품 스타일리스트|🍓|손기술·음식|음식의 색과 모양을 꾸며 사진이나 영상에서 보기 좋게 표현한다.|푸드스타일링과·식품영양학과|음식 연출과 촬영 경험이 도움 된다|A,R|A,H,C|ISFP,ENFP,INFP,ESFP|영상·광고와 연결된 음식 연출 기술이 활용된다.
+전통 공예가|🪭|손기술·음식|전통 무늬와 제작 방법을 살려 새로운 생활 작품을 만든다.|전통공예과·문화재 관련 학과|전통 기술을 배우고 작품을 제작하는 경험이 중요하다|A,R|H,A,Q|ISFP,INFP,ISTJ,ENFP|전통문화를 현대 생활과 연결하는 창작 활동을 할 수 있다.
+악기 제작자|🎸|손기술·음식|악기의 모양과 재료를 살펴 좋은 소리가 나도록 만든다.|악기제작 관련 교육·목공예과|정밀 제작 기술과 음악 이해가 도움 된다|R,A|H,U,Q|ISTP,ISFP,INTP,INFP|악기 수리와 맞춤 제작 등 섬세한 손기술이 활용된다.
+건축가|🏠|건축·도시|사람들이 안전하고 편리하게 사용할 건물을 설계한다.|건축학과|건축사 자격은 정해진 실무·시험 요건 필요|R,A,I|V,C,L|INTJ,ENTP,ISFP,ISTJ|에너지 절약과 안전을 고려한 건축 설계가 중요해진다.
+실내 디자이너|🛋️|건축·도시|집과 학교 등 실내 공간을 편리하고 아름답게 꾸민다.|실내디자인과·공간디자인과|설계 도구와 작품집이 도움 된다|A,R|V,A,C|ISFP,ENFP,INTJ,INFP|작은 공간도 효율적으로 사용하는 디자인에 관심이 이어진다.
+도시 계획가|🏙️|건축·도시|도로·공원·집이 조화롭게 어울리는 도시를 계획한다.|도시공학과·도시계획학과|도시·교통 자료 분석과 설계 경험이 중요하다|I,E,S|V,L,P|INTJ,ENTJ,INFJ,ENTP|걷기 좋은 친환경 도시를 만드는 계획이 중요해진다.
+교통 공학자|🚇|건축·도시|사람들이 더 안전하고 편리하게 이동할 방법을 연구한다.|교통공학과·도시공학과|자료 분석과 교통 설계 공부가 도움 된다|I,R,C|L,V,Q|INTJ,ISTJ,INTP,ENTP|대중교통과 미래 이동 수단의 안전과 효율이 중요해진다.
+친환경 건축 전문가|🍃|건축·도시|에너지를 아끼고 자연을 생각하는 건물을 설계·점검한다.|건축공학과·환경공학과|에너지·건축 관련 자격이 도움 된다|I,R,A|V,N,L|INTJ,ISFJ,INTP,ISTP|탄소를 줄이는 건물 기술의 중요성이 커질 수 있다.
+전기자동차 엔지니어|🚙|건축·도시|전기로 움직이는 자동차의 부품과 성능을 연구한다.|자동차공학과·기계공학과|전기·기계 설계와 실습이 중요하다|R,I|L,H,V|ISTP,INTP,INTJ,ESTP|친환경 이동 수단을 더 안전하게 만드는 기술이 활용된다.
+기계공학자|⚙️|건축·도시|기계가 잘 움직이도록 부품을 설계하고 성능을 시험한다.|기계공학과|기계 설계와 실험 경험이 중요하다|R,I|L,V,H|ISTP,INTP,INTJ,ISTJ|로봇과 친환경 설비 등 새로운 기계 개발에 참여할 수 있다.
+사회복지사|🤝|사회·소통|도움이 필요한 사람과 지역사회에 알맞은 지원을 연결한다.|사회복지학과|사회복지사 자격 필요|S,E|P,G,Q|ESFJ,ENFJ,ISFJ,INFJ|다양한 사람을 존중하고 돌보는 지역사회 서비스가 중요하다.
+통역사|🌍|사회·소통|서로 다른 언어를 쓰는 사람들이 대화하도록 말을 옮겨 준다.|영어영문학과·통번역 관련 학과|외국어 능력과 전문 분야 공부가 중요하다|S,A,I|G,P,Q|ENFJ,INFJ,ENFP,ISFJ|AI 번역 도구와 협력해 정확한 상황 이해가 더 중요해질 수 있다.
+번역가|📗|사회·소통|다른 나라의 글을 뜻과 분위기에 맞게 우리말 등으로 옮긴다.|외국어 관련 학과·통번역학과|언어 실력과 분야별 지식이 중요하다|A,I,C|G,Q,C|INFP,INFJ,INTJ,ISFJ|기계 번역을 확인하고 자연스러운 표현을 만드는 역량이 필요하다.
+기자|🎤|사회·소통|사람들에게 필요한 소식을 조사하고 사실을 확인해 전한다.|언론정보학과·신문방송학과|취재·글쓰기·사실 확인 능력이 중요하다|S,E,I|G,P,Q|ENTP,ENFJ,INTJ,ENFP|정보가 많아질수록 사실을 검증하는 능력이 중요해진다.
+아나운서|🎙️|사회·소통|뉴스와 프로그램의 내용을 정확하고 친절하게 전달한다.|미디어커뮤니케이션학과·언론정보학과|발음·발표·소통 연습이 중요하다|S,A,E|G,P,Q|ENFJ,ESFJ,ENFP,ESTJ|다양한 온라인 매체에서 정확히 전달하는 능력이 활용된다.
+방송 프로그램 제작자|📺|사회·소통|방송의 내용을 기획하고 촬영·편집팀과 함께 프로그램을 만든다.|방송영상학과·미디어학과|기획과 영상 제작 경험이 도움 된다|E,A,S|C,G,P|ENTP,ENFP,ENFJ,INTJ|온라인 영상과 여러 방송 형식이 다양해지고 있다.
+다큐멘터리 제작자|🌎|사회·소통|자연과 사람의 실제 이야기를 조사해 영상으로 기록한다.|영상학과·언론정보학과|조사·촬영·편집 경험이 중요하다|I,A,S|G,C,V|INFJ,INFP,INTP,ENFP|신뢰할 수 있는 기록과 깊이 있는 영상의 가치가 이어진다.
+행사 기획자|🎉|사회·소통|축제와 전시, 학교 행사 등의 순서와 활동을 계획한다.|이벤트학과·관광경영학과|기획과 소통 경험이 도움 된다|E,S,A|P,C,G|ENFP,ENFJ,ESTJ,ESFJ|사람들이 함께 참여하는 체험형 행사가 다양해질 수 있다.
+여행 기획자|🧳|사회·소통|여행객에게 알맞은 여행 경로와 체험 활동을 제안한다.|관광학과·관광경영학과|여행상품 기획과 외국어 공부가 도움 된다|E,S,A|G,P,C|ENFP,ESFJ,ENFJ,ENTP|지역 특색을 살린 체험과 지속가능한 여행의 가치가 커질 수 있다.
+국제협력 활동가|🕊️|사회·소통|여러 나라 사람들과 협력해 교육·환경 등 공동 문제를 해결한다.|국제학과·국제개발협력 관련 학과|외국어와 국제 문제 이해가 도움 된다|S,E,I|G,P,Q|ENFJ,INFJ,ENFP,ENTJ|나라 간 협력이 필요한 문제를 해결하는 역할이 중요하다.
+마케팅 기획자|📣|기획·경영|사람들이 원하는 상품과 서비스를 조사하고 알리는 방법을 기획한다.|경영학과·광고홍보학과|시장 조사와 기획 경험이 도움 된다|E,A,S|G,C,P|ENTP,ENFP,ENTJ,ENFJ|소비자에게 도움이 되는 정직한 홍보와 자료 분석이 중요해진다.
+상품 기획자|🎁|기획·경영|사람들의 필요를 조사해 새로운 상품을 기획하고 개선한다.|경영학과·산업디자인과|기획과 자료 조사 경험이 도움 된다|E,I,A|C,P,L|ENTP,ENTJ,ENFP,INTJ|친환경·맞춤형 제품처럼 새로운 요구를 찾는 역할이 이어진다.
+사회적 기업가|💡|기획·경영|사회문제를 해결하면서 지속가능한 사업을 운영한다.|경영학과·사회혁신 관련 학과|창업과 사회문제 해결 경험이 도움 된다|E,S,I|P,C,G|ENFJ,ENTJ,ENFP,INFJ|환경과 지역사회에 도움이 되는 사업이 주목받을 수 있다.
+브랜드 디자이너|✨|기획·경영|상품이나 기관의 특징이 잘 드러나도록 이름과 그림, 분위기를 만든다.|시각디자인과·광고홍보학과|디자인 작품집과 기획 경험이 도움 된다|A,E|A,C,G|ENFP,INFP,ENTP,ISFP|다양한 서비스를 차별화하는 디자인의 역할이 이어진다.
+광고 기획자|🗯️|기획·경영|좋은 상품과 공익 활동을 알릴 방법을 조사하고 광고를 기획한다.|광고홍보학과·경영학과|문장 쓰기와 기획 능력이 도움 된다|E,A,S|G,C,P|ENTP,ENFP,ENFJ,ENTJ|새로운 매체가 등장하면서 창의적이고 책임 있는 광고가 중요하다.
+회계사|🧮|기획·경영|돈의 기록이 정확한지 살펴보고 회계 자료를 점검한다.|회계학과·경영학과|공인회계사 시험과 자격 요건 확인|C,I|L,Q,G|ISTJ,INTJ,ESTJ,INTP|자동화 도구와 함께 자료를 검증하고 판단하는 능력이 중요하다.
+세무사|📒|기획·경영|세금과 관련된 자료를 살펴보고 올바른 신고를 돕는다.|세무학과·회계학과|세무사 자격 요건 확인|C,I,S|L,G,Q|ISTJ,ESTJ,INTJ,ISFJ|세금 규정이 달라질 때 정확히 이해하고 안내하는 역할이 있다.
+품질관리 전문가|✅|기획·경영|제품과 서비스가 안전하고 일정한 기준에 맞는지 확인한다.|산업공학과·품질경영 관련 학과|품질경영기사 등 관련 자격이 도움 된다|C,R,I|L,Q,H|ISTJ,INTJ,ISFJ,ESTJ|안전하고 믿을 수 있는 제품을 만들기 위한 점검이 중요하다.
+물류 기획자|📦|기획·경영|물건을 필요한 곳에 제때 보내는 이동 계획을 세운다.|물류학과·산업공학과|물류관리사 등 관련 자격이 도움 된다|C,E,I|L,V,P|ISTJ,ESTJ,INTJ,ENTJ|친환경 배송과 스마트 물류 기술을 활용하는 일이 늘 수 있다.
+체육 교사|🏀|운동·스포츠|학생들이 안전하고 즐겁게 운동하도록 체육 수업을 가르친다.|체육교육과|중등학교 정교사 자격 필요|S,R|M,P,G|ESFP,ENFJ,ESTP,ESFJ|건강한 생활 습관을 가르치는 체육교육의 가치가 크다.
+생활 스포츠 지도사|🏃|운동·스포츠|여러 연령의 사람이 즐겁고 안전하게 운동하도록 알려준다.|스포츠과학과·체육학과|생활스포츠지도사 등 해당 자격이 도움 된다|R,S|M,P,Q|ESFP,ESTP,ENFJ,ISFJ|일상 속 건강 관리와 운동 지도의 필요성이 이어진다.
+운동선수|🏅|운동·스포츠|자신의 종목을 꾸준히 연습하고 경기에서 기량을 보여준다.|체육학과·스포츠 관련 학과|종목별 훈련과 경기 경험이 중요하다|R,E|M,Q,P|ESTP,ISTP,ESFP,ENTJ|종목별 기회가 다르며 건강 관리와 다양한 진로 준비가 중요하다.
+스포츠 재활 전문가|🧘|운동·스포츠|운동 뒤 몸의 회복을 도와 안전하게 활동하도록 운동을 안내한다.|운동재활학과·스포츠의학 관련 학과|업무 범위에 따라 관련 면허·자격을 확인해야 한다|R,S,I|M,P,Q|ISFJ,ESTP,ESFJ,ISTP|예방 운동과 건강 회복을 돕는 전문 지식의 중요성이 이어진다.
+스포츠 데이터 분석가|📈|운동·스포츠|선수와 팀의 경기 자료를 분석해 전략을 세우는 데 도움을 준다.|스포츠과학과·통계학과|통계 분석과 종목 이해가 중요하다|I,R,C|L,M,Q|INTJ,INTP,ISTJ,ENTP|경기 기록과 센서 자료를 활용하는 분석 분야가 발전할 수 있다.
+스포츠 심리 전문가|🫶|운동·스포츠|운동하는 사람이 자신감과 집중력을 기르도록 상담과 훈련을 돕는다.|스포츠심리학과·심리학과|관련 심리·상담 전문 교육과 자격 확인|S,I,R|Q,P,M|INFJ,ENFJ,ISFJ,INFP|운동 능력뿐 아니라 마음 관리의 중요성도 커지고 있다.
+문화유산 해설사|🏯|역사·문화|유적과 문화유산이 지닌 이야기를 방문객에게 알기 쉽게 설명한다.|역사학과·문화유산 관련 학과|지역별 해설사 양성 교육이 도움 된다|S,A,I|G,P,Q|ENFJ,INFJ,ESFJ,INFP|문화유산을 직접 경험하는 여행과 교육에서 활동할 수 있다.
+고고학자|🏺|역사·문화|옛날 사람들이 남긴 유물과 유적을 조사해 과거 생활을 연구한다.|고고학과·사학과|발굴 조사와 연구 경험이 중요하다|I,R|Q,N,L|INTP,INTJ,ISFP,INFJ|문화유산 보존과 과학적 조사 기술이 계속 중요하다.
+역사 연구원|📜|역사·문화|옛 기록을 읽고 비교하여 역사 속 사실과 의미를 연구한다.|사학과·역사교육과|사료 읽기와 연구 경험이 중요하다|I,C|G,Q,L|INTJ,INFJ,INTP,ISTJ|디지털 기록 활용이 늘어도 믿을 만한 역사 연구가 중요하다.
+문화재 보존 전문가|🖼️|역사·문화|오래된 유물과 작품이 잘 보존되도록 상태를 살피고 복원한다.|문화재보존학과·보존과학과|보존 처리 기술과 전문 교육이 중요하다|I,R,A|H,Q,A|ISFJ,ISTJ,INTJ,ISFP|소중한 문화유산을 다음 세대에 남기는 일이 꾸준히 필요하다.
+박물관 전시 기획자|🏛️|역사·문화|전시 주제를 정하고 유물과 작품을 사람들이 이해하기 쉽게 배치한다.|박물관학과·역사학과|관련 학예 교육·경험과 자격 요건 확인|A,I,E|C,G,V|INFJ,ENFP,INTJ,INFP|체험과 디지털 기술을 활용한 전시가 다양해질 수 있다.
+기록물 관리 전문가|🗂️|역사·문화|중요한 문서와 사진을 정리하고 오래 보존해 활용할 수 있게 한다.|기록관리학 관련 학과·문헌정보학과|기록물관리 전문요원은 별도 자격 요건 확인|C,I|G,L,Q|ISTJ,INTJ,ISFJ,INFJ|전자문서 보존과 신뢰할 수 있는 기록 관리가 중요해진다.
+관광통역 안내사|🗺️|역사·문화|다른 나라 방문객에게 우리나라의 여행지와 문화를 소개한다.|관광학과·외국어 관련 학과|관광통역안내사 자격 필요 업무 확인|S,E,A|G,P,Q|ENFJ,ESFJ,ENFP,INFJ|지역 문화와 깊이 있는 체험을 안내하는 역할이 이어질 수 있다.
+역사 콘텐츠 제작자|⌛|역사·문화|역사 자료를 조사해 퀴즈·영상·게임 같은 재미있는 학습 콘텐츠를 만든다.|역사학과·콘텐츠학과|역사 조사와 콘텐츠 제작 경험이 도움 된다|A,I,S|G,C,V|ENFP,INFJ,INTP,ENTP|디지털 역사 체험과 교육 콘텐츠의 형태가 다양해질 수 있다.
+도시재생 기획자|🏡|사회·소통|오래된 동네의 장점을 살려 사람들이 더 살기 좋은 곳으로 만든다.|도시공학과·사회학과|주민 소통과 지역 조사 경험이 중요하다|S,E,I|P,V,G|ENFJ,INFJ,ENTJ,ENFP|지역에 맞는 지속가능한 도시 발전의 중요성이 이어진다.
+반려동물 용품 디자이너|🦴|동물·자연|동물이 안전하고 편리하게 쓸 수 있는 장난감과 생활용품을 설계한다.|산업디자인과·동물 관련 학과|디자인 실습과 동물 행동 이해가 도움 된다|A,R,S|A,H,N|ISFP,ENFP,INFP,ISTP|동물 복지와 안전을 고려한 제품에 관심이 이어질 수 있다.
+공공서비스 디자이너|🚏|건축·도시|모두가 쉽게 이용할 수 있도록 공공 안내문과 시설 이용 경험을 개선한다.|서비스디자인과·산업디자인과|이용자 조사와 디자인 작품집이 도움 된다|S,A,I|P,V,C|INFJ,ENFJ,INTJ,ENFP|어린이와 노인 등 다양한 사람을 배려하는 설계가 중요하다.
+수학 연구원|🔢|과학·환경|숫자와 규칙 속 새로운 원리를 찾고 복잡한 문제를 풀 방법을 연구한다.|수학과·응용수학과|수학 연구와 문제 해결 경험이 중요하다|I,C|L,Q,C|INTP,INTJ,ENTP,ISTJ|AI·과학·경제 등에서 수학적 사고가 폭넓게 활용된다.
+발명가·제품 개발자|💡|컴퓨터·기술|일상에서 불편한 점을 찾아 새롭고 유용한 물건을 만든다.|공학 관련 학과·산업디자인과|발명 실습과 제작 경험이 도움 된다|R,I,A|C,H,V|ENTP,INTP,ENFP,ISTP|생활 문제를 해결하는 실용적 아이디어가 여러 산업에서 필요하다.
+소방관|🚒|안전·공공|화재를 예방하고 위험한 상황에 있는 사람을 안전하게 돕는다.|소방·응급구조 관련 학과|소방공무원 채용과 체력·교육 요건 확인|R,S|M,P,Q|ESTP,ISFJ,ESFJ,ISTJ|안전 교육과 재난 예방·대응 능력이 계속 중요하다.
+경찰관|👮|안전·공공|시민의 안전을 지키고 도움이 필요한 사람을 보호한다.|경찰행정학과·법학과|경찰공무원 채용과 교육 요건 확인|S,R,C|P,M,G|ESTJ,ESFJ,ISTJ,ENFJ|지역사회의 안전과 시민을 돕는 역할이 이어진다.
+119구급대원|🚑|안전·공공|아픈 사람을 현장에서 돕고 병원까지 안전하게 이동하도록 돕는다.|응급구조학과·간호학과|응급구조사 자격 또는 간호사 면허 등 요건 확인|S,R|M,P,Q|ISFJ,ESTP,ESFJ,ISTJ|응급 상황에서 신속하고 정확하게 돕는 능력이 필요하다.
+항공기 조종사|✈️|교통·항공|비행 전 안전을 확인하고 항공기를 조종해 사람들을 목적지로 데려간다.|항공운항학과|항공 신체검사와 조종사 자격·훈련 필요|R,I|V,L,Q|ISTJ,ISTP,INTJ,ESTJ|항공 안전과 새로운 운항 기술을 익히는 일이 중요하다.
+항공 승무원|🛫|교통·항공|비행기 승객에게 안전 수칙을 알리고 편안한 여행을 돕는다.|항공서비스학과·관광 관련 학과|안전 교육과 외국어·고객 응대 능력 도움|S,E|P,G,Q|ESFJ,ENFJ,ISFJ,ENFP|승객의 안전과 다양한 문화에 대한 이해가 중요하다.
+항공 정비사|🛠️|교통·항공|비행기 부품을 검사하고 고쳐 안전하게 날 수 있도록 한다.|항공정비학과·기계공학과|항공정비사 자격 등 업무 요건 확인|R,I,C|H,V,L|ISTP,ISTJ,INTP,ISFJ|새로운 항공기 기술에도 꼼꼼한 안전 점검이 필요하다.
+기차 기관사|🚆|교통·항공|열차를 안전하게 운전하고 운행 상황을 확인한다.|철도운전 관련 교육·철도공학과|철도차량 운전면허 등 자격 필요|R,C|V,Q,L|ISTJ,ISFJ,ISTP,ESTJ|대중교통 안전과 정확한 운행 관리가 중요하다.
+버스 운전기사|🚌|교통·항공|정해진 길을 따라 승객을 안전하게 목적지로 데려간다.|교통 관련 교육·운전 전문 교육|해당 운전면허와 운전자격 요건 필요|R,S|V,M,P|ISTJ,ESFJ,ISFJ,ESTP|안전하고 친절한 대중교통 서비스가 꾸준히 필요하다.
+선박 항해사|🚢|교통·항공|배의 항로와 날씨를 살펴 안전하게 운항하도록 한다.|항해학과·해양 관련 학과|해기사 면허와 승선 교육 필요|R,I,C|V,L,Q|ISTJ,INTJ,ISTP,ESTJ|해상 물류와 안전 운항 기술을 함께 익히는 일이 중요하다.
+자동차 정비사|🔧|교통·항공|자동차의 상태를 점검하고 고장 난 곳을 수리한다.|자동차과·기계 관련 학과|자동차정비 관련 국가기술자격이 도움|R,I|H,L,V|ISTP,ISTJ,INTP,ESTP|전기자동차 등 새로운 자동차 기술에 맞춘 정비가 필요하다.
+의사|🩺|건강·의료|사람들의 건강 상태를 살펴 질병을 진단하고 치료한다.|의예과·의학과|의사 국가시험 합격과 면허 필요|I,S|L,P,Q|INTJ,INFJ,ISFJ,ENTP|새로운 의료기술을 배우면서 사람을 세심하게 돌보는 역할이 중요하다.
+치과의사|🦷|건강·의료|치아와 입 안의 건강을 살펴 치료하고 관리 방법을 알려준다.|치의예과·치의학과|치과의사 면허 필요|I,S,R|H,Q,P|ISTJ,ISFJ,INTJ,ENFJ|예방 진료와 정확한 치과 치료가 꾸준히 중요하다.
+한의사|🌿|건강·의료|한의학 지식을 바탕으로 몸 상태를 살피고 건강 관리를 돕는다.|한의예과·한의학과|한의사 면허 필요|I,S|N,P,Q|INFJ,ISFJ,INTJ,ENFJ|안전하고 근거를 살피는 건강 관리의 중요성이 이어진다.
+안경사|👓|건강·의료|시력을 확인하고 알맞은 안경을 고르고 맞추도록 돕는다.|안경광학과|안경사 면허 필요|S,R,C|H,P,L|ESFJ,ISFJ,ISTJ,ISTP|디지털 기기 사용이 늘면서 눈 건강을 돕는 역할이 중요하다.
+치과기공사|🦷|건강·의료|치과 치료에 필요한 보철물 등을 정밀하게 제작한다.|치기공학과|치과기공사 면허 필요|R,I|H,V,Q|ISTP,ISTJ,INTP,ISFP|디지털 설계와 정밀 제작 기술을 함께 익히는 일이 중요하다.
+응급구조사|🚑|건강·의료|응급 상황에서 환자의 상태를 살피고 필요한 응급처치를 돕는다.|응급구조학과|응급구조사 자격 필요|S,R|M,P,Q|ESTP,ISFJ,ESFJ,ISTJ|응급상황에 대비한 전문 교육과 빠른 판단이 중요하다.
+심리상담사|💬|교육·상담|사람의 마음과 고민을 잘 듣고 문제를 해결할 방법을 함께 찾는다.|심리학과·상담학과|상담 분야별 교육·수련·자격 확인|S,I|P,Q,G|INFJ,ENFJ,ISFJ,INFP|다양한 사람의 마음 건강을 돕는 소통 능력이 중요하다.
+상담 교사|🏫|교육·상담|학생이 학교생활과 고민을 잘 해결하도록 상담하고 지원한다.|교육학과·상담 관련 교직 과정|전문상담교사 자격 요건 확인|S,I|P,Q,G|INFJ,ENFJ,ISFJ,INFP|학생의 건강한 성장과 마음 돌봄을 돕는 역할이 중요하다.
+중학교 교사|📚|교육·상담|중학생에게 담당 과목을 가르치고 배움을 돕는다.|담당 교과 사범대학·교직 과정|중등학교 정교사 자격 필요|S,I|G,P,C|ENFJ,INFJ,ISTJ,ESFJ|과목 전문성과 학생을 이해하는 능력이 함께 중요하다.
+대학교 교수|🎓|교육·상담|대학생을 가르치고 자신의 전문 분야를 연구한다.|관심 분야의 대학·대학원|일반적으로 대학원 연구·강의 경력 도움|I,S|G,L,Q|INTJ,INTP,INFJ,ENFJ|새로운 지식을 연구하고 나누는 역할이 이어진다.
+방과후 교육 강사|🧑‍🏫|교육·상담|학생들에게 미술·체육·코딩 등 다양한 활동을 가르친다.|가르칠 분야 관련 학과·교육 과정|분야별 지도 경험과 관련 자격 도움|S,A|P,G,C|ENFJ,ESFJ,ENFP,ISFJ|다양한 배움과 체험 활동에 대한 관심이 이어질 수 있다.
+보육교사|🧸|교육·상담|어린아이들이 안전하게 놀고 배우며 성장하도록 돌본다.|아동학과·보육 관련 학과|보육교사 자격 요건 확인|S,A|P,G,Q|ESFJ,ISFJ,ENFP,ENFJ|어린이의 건강한 성장과 발달을 지원하는 일이 중요하다.
+가수|🎤|예술·공연|노래를 연습하고 공연·녹음 등으로 음악을 들려준다.|실용음악과·성악과|발성 연습과 꾸준한 공연 경험이 도움|A,E|U,G,Q|ENFP,ISFP,ESFP,INFP|온라인 음악과 공연 무대가 다양해져 창작 역량이 중요하다.
+아이돌 가수|🌟|예술·공연|노래와 춤을 함께 연습하고 무대에서 공연한다.|실용음악과·실용무용과|노래·춤 연습과 협동 능력이 중요|A,E,S|U,M,P|ESFP,ENFP,ISFP,ENFJ|무대 표현과 디지털 음악 콘텐츠 활동이 다양해질 수 있다.
+배우|🎭|예술·공연|연극·영화·드라마에서 인물의 마음과 행동을 연기한다.|연극영화과·연기예술과|연기 훈련과 공연 경험이 도움|A,S|G,Q,P|ENFP,ISFP,INFP,ESFP|영상과 공연 형식이 다양해져 다양한 연기 표현이 쓰인다.
+뮤지컬 배우|🎶|예술·공연|이야기 속 인물을 노래와 춤, 연기로 표현한다.|뮤지컬과·연극영화과|노래·춤·연기 실습이 중요|A,S,E|U,M,G|ESFP,ENFP,ENFJ,ISFP|공연을 통해 이야기를 전하는 무대 예술의 매력이 이어진다.
+성우|🎧|예술·공연|애니메이션·광고·책 등에 목소리로 인물과 이야기를 표현한다.|방송연예과·연기 관련 학과|발성·연기·녹음 경험이 중요|A,S|G,U,Q|ENFP,INFP,INFJ,ISFP|영상·게임·오디오 콘텐츠에 목소리 표현이 계속 활용된다.
+댄서|💃|예술·공연|음악에 맞춰 춤을 만들고 연습해 무대에서 보여준다.|실용무용과·무용학과|꾸준한 춤 연습과 무대 경험이 중요|A,R|M,U,C|ESFP,ISFP,ESTP,ENFP|공연·영상 등 춤을 보여줄 수 있는 무대가 다양하다.
+무용가|🩰|예술·공연|몸의 움직임으로 음악과 이야기를 표현하고 공연한다.|무용학과|체력 관리와 무용 훈련·공연 경험이 중요|A,R|M,U,Q|ISFP,ESFP,INFP,ENFP|예술 공연과 융합 무대에서 움직임 표현이 활용된다.
+모델|👗|예술·공연|옷이나 상품의 특징이 잘 보이도록 사진과 무대에서 표현한다.|패션모델 관련 교육·패션학과|자세·표현력·현장 경험이 도움|A,E|M,A,Q|ESFP,ISFP,ENFP,ESTP|광고·온라인 쇼핑 등 다양한 콘텐츠에서 활동할 수 있다.
+미술가|🖌️|예술·공연|그림과 여러 재료로 생각과 느낌을 작품으로 만든다.|회화과·미술학과|작품 제작과 포트폴리오가 중요|A,I|A,C,Q|INFP,ISFP,ENFP,INTP|새로운 표현 도구와 전시 공간이 다양해지고 있다.
+웹소설 작가|📖|예술·공연|독자가 즐길 수 있는 이야기를 글로 쓰고 연재한다.|문예창작과·국문학과|글쓰기와 꾸준한 작품 완성이 중요|A,I|G,C,Q|INFP,INFJ,ENFP,INTP|온라인 읽기 플랫폼과 이야기 콘텐츠 제작이 이어진다.
+시인|✒️|예술·공연|생각과 감정을 짧고 깊이 있는 시로 표현한다.|문예창작과·국문학과|독서·글쓰기·작품 활동이 중요|A,I|G,C,Q|INFP,INFJ,ISFP,ENFP|책과 온라인 매체 등 여러 곳에서 문학을 만날 수 있다.
+영화 감독|🎬|예술·공연|영화의 이야기를 정하고 촬영팀과 함께 영상을 만든다.|영화영상학과·연출 관련 학과|영화 제작과 협력 경험이 중요|A,E,I|C,G,P|ENFP,ENTP,INTJ,INFJ|새로운 영상 기술과 다양한 이야기의 표현이 중요해진다.
+영상 크리에이터|📹|예술·공연|교육·과학·요리 등 유익한 주제를 정해 영상을 만들고 소개한다.|미디어콘텐츠학과·영상학과|기획·촬영·편집과 저작권 이해 필요|A,E,S|C,G,V|ENFP,ENTP,ISFP,ENFJ|온라인 콘텐츠가 다양해져 정확하고 책임 있는 제작이 중요하다.
+1인 미디어 진행자|🎙️|예술·공연|안전하고 유익한 주제로 시청자에게 정보를 전하고 소통한다.|미디어학과·방송 관련 학과|방송 기획과 온라인 예절·저작권 이해 필요|A,E,S|G,P,C|ENFP,ENFJ,ESFP,ENTP|책임 있는 온라인 소통과 콘텐츠 제작 역량이 중요하다.
+게임 방송 진행자|🎮|예술·공연|게임의 특징과 즐기는 방법을 건전하게 소개하는 방송을 만든다.|게임콘텐츠과·미디어학과|영상 편집·건전한 방송 운영·저작권 공부|A,E,S|G,C,P|ENFP,ENTP,ESFP,INFP|게임 문화와 함께 재미있고 안전한 방송 운영이 중요하다.
+프로게이머|🕹️|운동·스포츠|전자스포츠 종목을 전략적으로 연습하고 대회에서 경쟁한다.|이스포츠 관련 교육·체육학과|종목 실력과 팀워크·건강 관리 중요|R,I,E|L,Q,P|INTP,ISTP,ENTP,ESTP|종목별 기회가 다르므로 실력과 함께 건강·진로 준비가 중요하다.
+축구 선수|⚽|운동·스포츠|축구 기술과 팀 전략을 연습하고 경기에 참가한다.|체육학과·축구 관련 교육|꾸준한 훈련과 팀 경기 경험이 중요|R,E|M,P,Q|ESTP,ESFP,ISTP,ENFJ|선수 활동뿐 아니라 지도와 스포츠 관련 분야로도 이어질 수 있다.
+야구 선수|⚾|운동·스포츠|공을 던지고 치는 기술을 연습하며 야구 경기에 참가한다.|체육학과·야구 관련 교육|꾸준한 체력·기술 훈련과 경기 경험|R,E|M,Q,P|ESTP,ISTP,ESFP,ESTJ|경기 실력과 건강 관리가 중요하며 관련 스포츠 진로도 있다.
+농구 선수|🏀|운동·스포츠|공을 다루고 팀원과 협력하며 농구 경기에 참가한다.|체육학과·스포츠 관련 교육|농구 훈련과 경기 경험이 중요|R,E|M,P,Q|ESTP,ESFP,ENFJ,ISTP|꾸준한 훈련과 팀워크가 중요하며 스포츠 분야로도 이어질 수 있다.
+수영 선수|🏊|운동·스포츠|수영 기술과 체력을 길러 수영 대회에 참가한다.|체육학과·수영 관련 교육|종목별 안전·기술 훈련과 경기 경험|R,E|M,Q,P|ISTP,ESTP,ISFP,ESFP|다양한 수영 종목에서 기술을 발전시키고 지도 활동으로도 이어질 수 있다.
+피겨 스케이팅 선수|⛸️|운동·스포츠|빙판 위에서 기술과 음악 표현을 연습해 경기에 참가한다.|체육학과·빙상 관련 교육|기술·체력 훈련과 경기 경험이 중요|R,A|M,U,Q|ISFP,ESFP,INFJ,ESTP|정교한 기술과 예술 표현을 함께 발전시키는 분야이다.
+태권도 지도자|🥋|운동·스포츠|태권도 기본 동작과 예절을 안전하게 가르친다.|태권도학과·체육학과|단증과 지도 관련 자격·교육 확인|R,S|M,P,Q|ESTP,ENFJ,ESFJ,ISTJ|운동과 예절을 함께 배우는 교육 활동이 이어질 수 있다.
+스포츠 해설가|🎙️|운동·스포츠|경기의 규칙과 선수들의 움직임을 알기 쉽게 설명한다.|체육학과·언론정보학과|종목 지식과 말하기·분석 연습이 중요|S,I|G,M,L|ENTP,ENFJ,ESTJ,ESFP|다양한 스포츠 매체에서 정확한 설명 능력이 활용된다.
+미용사|💇|생활·서비스|머리 모양을 손질하고 고객에게 알맞은 머리 관리를 돕는다.|헤어디자인과·미용학과|미용사 관련 국가기술자격 필요 업무 확인|A,R,S|H,A,P|ESFP,ISFP,ENFP,ESFJ|새로운 스타일과 개인에게 맞춘 서비스 기술이 중요하다.
+메이크업 아티스트|💄|생활·서비스|상황과 사람의 특징에 맞게 화장과 분장을 돕는다.|메이크업학과·미용학과|미용사(메이크업) 자격 등 확인|A,R,S|A,H,P|ISFP,ENFP,ESFP,INFP|공연과 영상·일상에서 다양한 표현 기술이 활용된다.
+네일 아티스트|💅|생활·서비스|손톱을 안전하게 관리하고 색과 무늬를 꾸며 준다.|네일아트과·미용 관련 학과|미용사(네일) 자격 등 확인|A,R|H,A,Q|ISFP,ESFP,INFP,ENFP|손기술과 위생 관리, 개성 있는 디자인이 중요하다.
+패션 스타일리스트|🧥|생활·서비스|상황과 목적에 맞는 옷과 소품을 골라 어울리게 연출한다.|패션디자인과·의상학과|스타일링 실습과 패션 이해가 중요|A,S,E|A,C,P|ENFP,ISFP,ESFP,INFP|다양한 미디어와 개인 맞춤형 스타일이 활용된다.
+퍼스널 컬러 전문가|🌈|생활·서비스|얼굴과 옷에 어울리는 색을 함께 살펴 스타일을 제안한다.|색채디자인 관련 학과·미용학과|색채 공부와 상담·실습 경험 도움|A,S|A,P,Q|ISFP,ENFP,ESFJ,INFP|개인의 취향을 존중하는 색채 상담에 관심이 이어질 수 있다.
+반려동물 미용사|🐩|동물·자연|동물의 안전과 건강을 생각하며 털과 발톱 등을 관리한다.|반려동물학과·동물미용 관련 교육|동물 복지·미용 실습과 관련 자격 도움|R,S|H,N,P|ISFP,ISFJ,ESFP,ISTP|반려동물을 배려하는 안전한 돌봄과 위생 관리가 중요하다.
+반려동물 훈련사|🐕|동물·자연|동물이 사람과 안전하게 지낼 수 있도록 행동을 관찰하고 훈련한다.|반려동물학과·동물행동 관련 교육|동물 행동 지식과 훈련 실습이 중요|R,S,I|N,P,Q|ISFJ,ESTP,INFJ,ISTP|동물 복지를 생각하는 올바른 훈련의 중요성이 커질 수 있다.
+동물원 사육사|🦒|동물·자연|동물의 먹이와 생활 환경을 챙기고 건강 상태를 관찰한다.|동물자원학과·생물학과|동물 행동·복지 이해와 현장 경험 필요|R,I,S|N,M,Q|ISFJ,ISTP,INFP,INTP|동물 복지와 종 보전을 고려하는 전문 관리가 중요하다.
+해양동물 구조·보호 전문가|🐬|동물·자연|다친 해양동물을 돕고 바다 생태계를 보호하는 활동을 한다.|해양생물학과·수산생명의학 관련 학과|해양 생물 이해와 현장 교육이 도움|I,S,R|N,M,Q|INFJ,ISFJ,ISTP,INTP|바다 환경 보호와 해양 생물 보전 활동이 중요하다.
+농부|🌾|동물·자연|논과 밭에서 작물을 가꾸고 안전한 먹거리를 생산한다.|농학과·원예학과|재배 기술·농업 교육과 현장 경험이 중요|R,I|N,M,H|ISFJ,ISTP,INFP,ESTJ|친환경 농업과 스마트 농업 기술을 활용하는 방법이 늘 수 있다.
+식물 관리 전문가|🪴|동물·자연|식물의 상태를 살피고 햇빛과 물을 알맞게 관리한다.|원예학과·식물자원학과|식물 재배와 병해충 관리 공부 도움|R,I|N,H,Q|ISFP,ISFJ,INTP,INFP|실내 식물과 도시 녹지를 건강하게 관리하는 일이 중요하다.
+과학자|🔬|과학·환경|궁금한 현상을 관찰하고 실험해 새로운 사실을 알아낸다.|자연과학 관련 학과|탐구·실험·자료 분석 경험이 중요|I,R|L,N,Q|INTP,INTJ,INFJ,ENTP|여러 분야에서 꾸준히 질문하고 검증하는 연구 능력이 중요하다.
+물리학자|⚛️|과학·환경|빛과 힘, 움직임 등 자연의 원리를 실험과 계산으로 연구한다.|물리학과|물리 실험과 수학 연구 경험 도움|I,R|L,V,Q|INTP,INTJ,ENTP,ISTJ|에너지·우주·첨단 기술의 기초 연구에 활용된다.
+생물학자|🧬|과학·환경|생물의 몸과 생활을 관찰하고 생명의 원리를 연구한다.|생물학과·생명과학과|실험과 자연 관찰 경험이 중요|I,R|N,L,Q|INTP,INFJ,INTJ,ISFP|생태계 보전과 생명과학 연구에 기초 지식이 쓰인다.
+해양학자|🌊|과학·환경|바다의 흐름과 생물, 환경 변화를 조사한다.|해양학과·해양과학과|관측·실험과 자료 분석 경험 중요|I,R|N,L,V|INTP,INTJ,ISFP,ISTP|해양 환경과 기후 변화를 이해하는 연구가 중요하다.
+우주비행사|🚀|과학·환경|우주에서 과학 실험을 하고 탐사 임무를 수행한다.|이공계·의학 등 다양한 관련 학과|전문 분야 경력·훈련과 엄격한 선발 요건 필요|I,R|M,L,Q|ISTP,INTJ,ENTP,ISTJ|우주 탐사가 발전하며 다양한 과학 기술 협력이 필요하다.
+드론 조종 전문가|🛸|컴퓨터·기술|드론을 안전하게 조종해 촬영·관찰·점검 등의 일을 돕는다.|무인항공학과·항공 관련 학과|업무에 따라 초경량비행장치 조종 자격 확인|R,I|V,H,Q|ISTP,INTP,ESTP,ISTJ|안전 규칙을 지키는 드론 활용 분야가 다양해질 수 있다.
+웹 개발자|💻|컴퓨터·기술|사람들이 사용할 웹사이트와 온라인 서비스를 만든다.|컴퓨터공학과·소프트웨어학과|프로그래밍 실습과 웹 제작 경험이 중요|I,R,A|L,C,V|INTP,INTJ,ENTP,ISTP|웹 접근성과 안전을 고려한 서비스 개발이 중요하다.
+프로그래머|🧑‍💻|컴퓨터·기술|컴퓨터가 필요한 일을 하도록 프로그램 코드를 작성한다.|컴퓨터공학과·소프트웨어학과|코딩과 문제 해결 프로젝트 경험이 중요|I,R|L,C,Q|INTP,INTJ,ENTP,ISTP|새로운 도구와 함께 프로그램의 정확성을 확인하는 능력이 중요하다.
+게임 기획자|🎲|컴퓨터·기술|게임 규칙과 이야기, 재미있는 활동을 계획한다.|게임학과·게임콘텐츠과|게임 규칙 설계와 협력 제작 경험 중요|A,E,I|C,L,G|ENTP,ENFP,INTJ,INTP|건전하고 창의적인 게임 경험을 설계하는 능력이 중요하다.
+게임 그래픽 디자이너|🕹️|컴퓨터·기술|게임 속 배경·인물·물건을 그림과 3D 영상으로 만든다.|게임그래픽과·시각디자인과|그림·3D 도구와 작품집이 중요|A,R|A,V,C|ISFP,INFP,INTP,ENFP|다양한 화면과 새로운 제작 도구에 맞는 표현이 필요하다.
+앱 디자이너|📱|컴퓨터·기술|휴대전화 앱의 화면을 쉽고 예쁘게 사용할 수 있도록 디자인한다.|시각디자인과·UX디자인 관련 학과|디자인 실습과 사용자 관찰이 도움|A,I,S|A,V,P|INFJ,ENFP,ISFP,INTJ|누구나 쉽게 쓰는 앱을 만드는 디자인이 중요하다.
+인공지능 개발자|🤖|컴퓨터·기술|인공지능 기술을 이용해 생활에 도움이 되는 프로그램을 만든다.|인공지능학과·컴퓨터공학과|수학·코딩·데이터 공부와 윤리 이해 중요|I,R|L,C,Q|INTP,INTJ,ENTP,INFJ|AI를 안전하고 책임 있게 활용하는 개발이 중요하다.
+로봇 개발자|🤖|컴퓨터·기술|사람의 일을 도와주는 로봇을 설계하고 실험한다.|로봇공학과·기계공학과|코딩·전자·기계 실습이 도움|R,I|H,L,V|ISTP,INTP,INTJ,ENTP|돌봄·교육·산업 등에 로봇을 안전하게 활용하는 연구가 중요하다.
+컴퓨터 수리 전문가|🖥️|컴퓨터·기술|컴퓨터 상태를 확인하고 고장 난 부품이나 프로그램 문제를 해결한다.|컴퓨터공학 관련 학과·전자과|컴퓨터 정비와 문제 해결 실습 도움|R,I|H,L,Q|ISTP,ISTJ,INTP,ISFJ|기기를 오래 안전하게 사용하도록 돕는 기술이 필요하다.
+발명가|💡|컴퓨터·기술|생활 속 불편한 문제를 찾아 새로운 해결 도구를 생각하고 만든다.|공학 관련 학과·산업디자인과|아이디어 구상과 발명 제작 경험 중요|I,A,R|C,H,V|ENTP,ENFP,INTP,ISTP|일상의 문제를 해결하는 참신하고 실용적인 발명이 중요하다.
+변호사|⚖️|법·행정|법률 지식을 이용해 사람들의 권리를 지키고 문제 해결을 돕는다.|법학전문대학원 진학 관련 학부|법학전문대학원·변호사시험 등 요건 필요|S,I,E|G,L,P|ENTJ,INFJ,INTJ,ENFJ|법률 문제를 정확히 이해하고 사람을 돕는 역할이 중요하다.
+판사|⚖️|법·행정|법과 증거를 살펴 다툼을 공정하게 판단한다.|법학 관련 공부·법학전문대학원|법조 경력과 법관 임용 요건 확인|I,C,S|L,G,Q|INTJ,ISTJ,INFJ,ESTJ|공정하고 책임 있게 판단하는 역할이 계속 중요하다.
+검사|📋|법·행정|법에 따라 사건을 조사하고 공정한 법 집행을 위해 일한다.|법학 관련 공부·법학전문대학원|법조 자격과 검사 임용 요건 확인|I,C,S|G,L,Q|ISTJ,INTJ,ESTJ,INFJ|법과 증거를 바탕으로 올바르게 판단하는 책임이 중요하다.
+공무원|🏢|법·행정|주민들에게 필요한 행정 서비스를 제공하고 지역 문제 해결을 돕는다.|행정학과 등 다양한 학과|담당 업무에 따라 공무원 채용·자격 확인|C,S,E|G,P,L|ISTJ,ESTJ,ESFJ,ISFJ|누구나 편리하게 공공서비스를 이용하도록 돕는 역할이 중요하다.
+외교관|🌐|법·행정|다른 나라와 대화하고 협력해 우리나라를 대표하는 일을 한다.|국제학과·정치외교학과|외교관 후보자 선발 등 채용 요건 확인|S,E,I|G,P,Q|ENFJ,ENTJ,INFJ,INTJ|국가 간 소통과 국제 문제 해결을 위한 협력이 중요하다.
+환경미화원|♻️|안전·공공|거리와 공공시설을 깨끗하게 관리하여 쾌적한 환경을 만든다.|환경·안전 관련 직업 교육|채용 기관별 업무·안전 교육 요건 확인|R,S|M,N,Q|ISTJ,ISFJ,ESTP,ESFJ|깨끗하고 안전한 도시 환경을 지키는 일이 중요하다.
+재활용 분리배출 지도사|♻️|안전·공공|사람들에게 올바른 분리배출 방법을 알려주고 자원 순환을 돕는다.|환경 관련 학과·환경교육 과정|환경교육과 자원순환 지식·활동 경험 도움|S,R,I|N,G,P|ENFJ,ISFJ,ENFP,ISTJ|쓰레기를 줄이고 자원을 아끼는 생활 교육이 중요하다.
+사서 교사|📚|교육·상담|학교 도서관을 운영하고 학생들의 독서와 정보 찾기를 돕는다.|문헌정보교육과·관련 교직 과정|사서교사 자격 요건 확인|S,C,I|G,P,Q|ISFJ,INFJ,ISTJ,ENFJ|정보를 잘 찾고 읽는 능력을 기르는 교육이 중요하다.
+은행원|🏦|기획·경영|돈을 맡기고 관리하는 일을 돕고 금융 서비스를 안내한다.|경영학과·경제학과|금융·회계 지식과 고객 소통 능력 중요|C,S,E|L,P,G|ISTJ,ESFJ,ESTJ,ISFJ|디지털 금융을 쉽게 이해하도록 안내하는 능력이 중요하다.
+경제 연구원|📊|기획·경영|물가와 소비 등 경제 자료를 조사해 변화 원인을 연구한다.|경제학과·통계학과|자료 분석과 경제학 공부가 중요|I,C|L,G,Q|INTJ,INTP,ISTJ,ENTP|사회 변화에 필요한 경제 자료를 이해하고 해석하는 일이 중요하다.
+호텔리어|🏨|생활·서비스|호텔에 온 손님을 맞이하고 편안하게 지낼 수 있도록 돕는다.|호텔경영학과·관광학과|외국어와 서비스·안전 교육이 도움|S,E,C|P,G,Q|ESFJ,ENFJ,ISFJ,ENFP|다양한 문화의 손님을 배려하는 친절한 서비스가 중요하다.
+파티시에|🧁|손기술·음식|케이크와 디저트를 맛있고 보기 좋게 만든다.|제과제빵과·식품 관련 학과|제과기능사 등 관련 자격과 실습 도움|R,A|H,A,C|ISFP,ESFP,INFP,ISTP|개성 있는 디저트와 건강을 생각한 재료 선택이 중요하다.
+푸드 연구가|🥗|손기술·음식|음식의 맛과 재료, 조리 방법을 연구해 새로운 식품을 만든다.|식품공학과·조리과학과|식품 안전과 조리·실험 경험이 중요|I,R,A|H,L,N|INTP,ISFP,INTJ,ISTJ|건강하고 지속가능한 먹거리를 연구하는 일이 중요하다.
+제빵사|🍞|손기술·음식|빵 반죽을 만들고 알맞은 온도에서 구워 여러 빵을 만든다.|제과제빵과|제빵기능사 등 관련 자격과 실습 도움|R,A|H,C,Q|ISFP,ISTP,ESFP,INFP|맛과 위생을 함께 생각하는 다양한 빵 만들기가 이어진다.
+셰프|👩‍🍳|손기술·음식|음식 재료와 조리 방법을 정해 맛있는 요리를 만든다.|조리학과·호텔조리과|조리기능사 등 관련 자격과 실습 도움|R,A,S|H,C,P|ESFP,ISFP,ISTP,ENFP|건강하고 개성 있는 메뉴를 개발하는 능력이 중요하다.
+운동 트레이너|💪|운동·스포츠|사람의 체력과 목표에 맞춰 안전한 운동을 알려준다.|체육학과·운동처방 관련 학과|관련 체육지도 자격과 지도 경험 도움|R,S|M,P,Q|ESTP,ESFJ,ENFJ,ISTP|건강과 체력을 관리하려는 관심이 이어질 수 있다.
+필라테스 지도자|🧘|운동·스포츠|몸의 자세와 움직임을 바르게 익히도록 운동을 지도한다.|체육학과·운동 관련 교육|해당 분야 지도 교육과 안전 지식 필요|R,S|M,P,Q|ISFJ,ESFJ,ESTP,INFJ|안전한 자세와 꾸준한 운동 습관을 돕는 활동이 중요하다.
+플로리스트 디자이너|💐|손기술·음식|꽃과 식물을 아름답게 조합해 장식과 선물을 만든다.|화훼디자인과·원예학과|화훼장식 관련 자격과 실습 도움|A,R|H,A,N|ISFP,INFP,ESFP,ENFP|친환경 재료와 새로운 꽃 디자인을 활용할 수 있다.
+유아 체육 지도사|🏃|운동·스포츠|어린아이들이 안전하고 즐겁게 움직이며 놀도록 돕는다.|체육학과·유아교육과|체육 지도·아동 안전 교육과 실습 도움|R,S|M,P,C|ESFP,ENFJ,ISFJ,ESTP|아이들의 건강한 신체 활동을 돕는 체육 놀이가 중요하다.
+조향사|🌸|생활·서비스|여러 향을 조합해 향수와 생활용품에 사용할 향을 만든다.|화학과·향장 관련 학과|향료와 안전한 화학 실험 교육·경험 도움|I,A|N,C,Q|INFP,ISFP,INTP,INTJ|안전하고 개성 있는 향기 제품을 개발하는 일이 있다.
+재난안전 전문가|🦺|안전·공공|학교와 지역의 위험을 줄이기 위한 안전 계획과 훈련을 돕는다.|안전공학과·소방방재학과|안전 관련 전문 교육과 자격 도움|I,S,C|V,L,P|ISTJ,ISFJ,INTJ,ENFJ|자연재해와 생활 속 안전을 준비하는 일이 중요하다.
+연구실 실험 기술자|🧪|과학·환경|연구실에서 실험 도구를 준비하고 안전하게 실험을 돕는다.|화학과·생물학과·이공계 관련 학과|실험실 안전과 실험 기초 교육 필요|I,R,C|H,L,Q|ISTJ,ISFJ,INTP,ISTP|안전하고 정확한 실험을 돕는 기술이 여러 연구에 쓰인다.
+기상캐스터|🌤️|사회·소통|날씨 자료를 확인해 시청자가 이해하기 쉽게 날씨 정보를 전한다.|대기과학과·미디어커뮤니케이션학과|기상 지식과 발표·정보 전달 연습이 중요|S,I,A|G,V,P|ENFJ,ESFJ,INFJ,ENFP|날씨와 기후 변화에 대한 정확한 안내가 중요하다.
+택시 운전기사|🚕|교통·항공|승객을 목적지까지 안전하고 친절하게 이동하도록 돕는다.|교통·운전 관련 직업 교육|해당 운전면허·택시운전자격 등 요건 확인|R,S,C|V,P,Q|ISTJ,ESFJ,ISFJ,ESTP|승객 안전과 지역 도로에 대한 이해가 계속 중요하다.
+국회의원|🏛️|법·행정|국민의 의견을 듣고 법률과 나라의 중요한 일을 논의한다.|정치외교학과·행정학과 등 다양한 학과|법에서 정한 선거 출마 요건과 선거 절차 확인|E,S,I|G,P,L|ENFJ,ENTJ,INFJ,ESTJ|다양한 의견을 존중하고 사회 문제를 해결하는 책임이 중요하다.
+대통령|🏛️|법·행정|나라를 대표하고 국민의 삶과 나라의 미래를 위한 중요한 일을 이끈다.|정치외교학과·행정학과 등 다양한 학과|헌법과 선거법이 정한 출마 자격과 선거 절차 필요|E,S,I|G,P,Q|ENFJ,ENTJ,INFJ,ESTJ|나라의 변화에 대응하고 국민과 소통하는 책임이 중요하다.
+창업가|🌟|기획·경영|사람에게 도움이 될 상품이나 서비스를 생각해 사업을 시작하고 운영한다.|경영학과·창업 관련 교육|사업 계획·회계·책임 있는 운영 공부 필요|E,A,I|C,P,L|ENTP,ENFP,ENTJ,INTJ|새로운 문제를 해결하는 유익한 서비스와 제품을 만들 기회가 있다.
+온라인 쇼핑몰 운영자|🛒|기획·경영|고객에게 필요한 물건을 골라 온라인에서 소개하고 주문을 관리한다.|경영학과·전자상거래 관련 학과|전자상거래·고객 보호·상품 관리 지식 중요|E,C,S|L,G,P|ESTJ,ESFJ,ENTP,ISTJ|온라인 거래가 이어지며 믿을 수 있는 운영이 중요하다.
+스포츠 감독|🏆|운동·스포츠|선수들의 강점을 살려 훈련과 경기 전략을 계획한다.|체육학과·스포츠과학과|종목 경험과 관련 지도자 자격·교육 확인|E,R,S|P,M,L|ENTJ,ENFJ,ESTJ,ESTP|선수의 건강과 팀워크를 함께 생각하는 지도력이 중요하다.
+치어리더|📣|예술·공연|춤과 응원 동작으로 경기장 분위기를 즐겁게 만들고 응원을 이끈다.|실용무용과·체육 관련 학과|춤·체력·팀워크와 무대 경험이 중요|A,R,S|M,U,P|ESFP,ENFP,ESTP,ENFJ|건전한 스포츠 응원과 공연을 결합한 활동이 이어질 수 있다.
+방송 작가|✍️|예술·공연|방송의 주제와 대본을 쓰고 프로그램 내용을 함께 준비한다.|문예창작과·미디어학과|글쓰기·취재·기획 연습이 중요|A,I,S|G,C,Q|INFP,ENFP,INFJ,ENTP|다양한 방송·온라인 영상에서 좋은 이야기와 정보가 중요하다.
+교육용 게임 디자이너|🎮|컴퓨터·기술|학생이 즐겁게 배우도록 퀴즈와 학습 게임을 기획하고 만든다.|게임학과·교육공학과|학습 내용 연구와 게임 제작·코딩 경험 중요|A,I,S|C,L,G|ENFP,INTP,ENTP,INFJ|학교와 온라인에서 재미있고 유익한 학습 콘텐츠가 필요하다.
+마술사|🎩|예술·공연|연습한 손기술과 이야기로 사람들에게 즐거운 공연을 보여준다.|공연예술 관련 교육·연극영화과|손기술·발표 연습과 안전한 공연 경험 중요|A,R,E|H,P,C|ESFP,ENFP,ISTP,ENTP|공연과 체험 프로그램에서 창의적인 무대를 선보일 수 있다.
+레고 모델 제작자|🧱|손기술·음식|블록으로 건물과 캐릭터 등을 구상하고 정교한 모형을 만든다.|산업디자인과·제품디자인과|공간 구성과 창의적인 제작 작품집 도움|A,R,I|V,H,C|ISFP,INTP,ENFP,ISTP|교육·전시와 놀이 콘텐츠에서 창의적 모형 제작이 활용된다.
+과학관 해설사|🔬|교육·상담|과학 전시와 실험 원리를 어린이와 방문객에게 알기 쉽게 설명한다.|과학교육과·자연과학 관련 학과|과학 지식과 시범·발표 경험이 도움|S,I|G,P,L|ENFJ,INFJ,ESFJ,INTP|과학을 쉽고 즐겁게 배우는 전시·체험 교육이 중요하다.
+패션 소품 디자이너|👒|예술·공연|가방과 모자 등 생활 소품을 구상하고 편리하고 예쁘게 만든다.|패션디자인과·공예디자인과|그림·재봉·제품 제작 경험이 도움|A,R|A,H,C|ISFP,ENFP,INFP,ISTP|오래 사용하고 재활용할 수 있는 소품 디자인이 중요하다.
+공원 관리사|🌳|동물·자연|공원 속 나무와 시설을 살펴 모두가 안전하게 쉬도록 관리한다.|산림자원학과·조경학과|식물·시설 안전과 관리 실습 도움|R,S|N,M,Q|ISFJ,ISTJ,ISTP,ESFJ|도시의 녹색 공간을 건강하게 유지하는 일이 중요하다.
+AI 윤리 연구원|💻|컴퓨터·기술|인공지능이 사람을 공정하고 안전하게 도울 수 있는지 살피고 개선 방법을 연구한다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+AI 학습 데이터 관리 전문가|💻|컴퓨터·기술|인공지능 학습에 쓰이는 자료를 정확하고 올바르게 정리하고 점검한다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+머신러닝 엔지니어|💻|컴퓨터·기술|컴퓨터가 자료에서 규칙을 배우도록 프로그램을 설계하고 성능을 확인한다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+데이터 시각화 전문가|💻|컴퓨터·기술|복잡한 숫자와 자료를 그래프와 그림으로 알기 쉽게 보여 준다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+웹 접근성 전문가|💻|컴퓨터·기술|다양한 사람이 웹사이트를 편하게 쓸 수 있도록 기능을 검사하고 고친다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+가상현실 개발자|💻|컴퓨터·기술|특수 기기를 통해 들어간 듯 체험할 수 있는 가상 공간을 만든다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+증강현실 콘텐츠 제작자|💻|컴퓨터·기술|현실 화면 위에 정보나 그림이 겹쳐 보이는 체험 콘텐츠를 제작한다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+컴퓨터 비전 연구원|💻|컴퓨터·기술|컴퓨터가 사진과 영상을 분석해 물체를 알아보는 기술을 연구한다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+음성인식 개발자|💻|컴퓨터·기술|사람의 말을 컴퓨터가 글이나 명령으로 알아듣도록 프로그램을 만든다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+자연어처리 연구원|💻|컴퓨터·기술|컴퓨터가 사람의 글과 말을 이해하고 활용하도록 기술을 연구한다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+클라우드 엔지니어|💻|컴퓨터·기술|인터넷을 통해 프로그램과 자료를 안전하게 이용하는 시스템을 관리한다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+네트워크 관리자|💻|컴퓨터·기술|학교나 회사의 컴퓨터가 서로 안정적으로 연결되도록 네트워크를 살핀다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+데이터베이스 관리자|💻|컴퓨터·기술|많은 자료를 체계적으로 저장하고 필요한 때 빠르게 찾도록 관리한다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+IT 서비스 운영자|💻|컴퓨터·기술|온라인 서비스가 잘 작동하는지 살피고 이용자의 불편을 해결한다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+소프트웨어 품질 테스트 전문가|💻|컴퓨터·기술|앱이나 프로그램을 직접 써 보며 오류를 찾아 개선을 돕는다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+디지털 지도 개발자|💻|컴퓨터·기술|위치와 지형 정보를 모아 편리한 디지털 지도를 만드는 일을 한다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+웹 성능 개선 전문가|💻|컴퓨터·기술|웹사이트가 빠르고 안정적으로 열리도록 프로그램을 점검한다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+키오스크 접근성 디자이너|💻|컴퓨터·기술|어린이와 어르신도 무인 안내 기기를 쉽게 쓰도록 화면을 설계한다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+교육용 앱 개발자|💻|컴퓨터·기술|학생들이 재미있고 알기 쉽게 공부할 수 있는 학습 앱을 만든다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+교육용 로봇 소프트웨어 개발자|💻|컴퓨터·기술|학습 로봇이 소리와 움직임으로 반응하도록 프로그램을 만든다.|컴퓨터공학과·소프트웨어학과·인공지능학과|코딩과 데이터 다루기, 협업 프로젝트 경험이 도움이 된다|I,R,E|L,C,V|INTP,INTJ,ENTP,ISTJ|디지털 기술이 바뀌므로 새로운 기술을 계속 배우는 능력이 중요하다.
+게임 레벨 디자이너|🕹️|컴퓨터·기술|게임 속 단계와 길을 설계해 재미있고 알맞은 난이도의 도전을 만든다.|게임공학과·게임디자인과·디지털콘텐츠학과|기획서 작성과 그림·프로그램 제작 경험이 도움이 된다|A,I,E|C,V,L|ENFP,INTP,ENTP,ISFP|즐겁고 건강한 디지털 체험을 설계하는 능력이 중요하다.
+게임 시나리오 작가|🕹️|컴퓨터·기술|게임 속 인물과 배경, 이야기를 구상하고 대사를 쓴다.|게임공학과·게임디자인과·디지털콘텐츠학과|기획서 작성과 그림·프로그램 제작 경험이 도움이 된다|A,I,E|C,V,L|ENFP,INTP,ENTP,ISFP|즐겁고 건강한 디지털 체험을 설계하는 능력이 중요하다.
+게임 사운드 기획자|🕹️|컴퓨터·기술|게임 장면에 어울리는 음악과 효과음을 고르고 배치한다.|게임공학과·게임디자인과·디지털콘텐츠학과|기획서 작성과 그림·프로그램 제작 경험이 도움이 된다|A,I,E|C,V,L|ENFP,INTP,ENTP,ISFP|즐겁고 건강한 디지털 체험을 설계하는 능력이 중요하다.
+게임 UX 연구원|🕹️|컴퓨터·기술|게임 이용자가 어떤 부분에서 편하거나 어려워하는지 살피고 개선한다.|게임공학과·게임디자인과·디지털콘텐츠학과|기획서 작성과 그림·프로그램 제작 경험이 도움이 된다|A,I,E|C,V,L|ENFP,INTP,ENTP,ISFP|즐겁고 건강한 디지털 체험을 설계하는 능력이 중요하다.
+게임 캐릭터 원화가|🕹️|컴퓨터·기술|게임 인물의 모습과 표정, 옷을 그림으로 디자인한다.|게임공학과·게임디자인과·디지털콘텐츠학과|기획서 작성과 그림·프로그램 제작 경험이 도움이 된다|A,I,E|C,V,L|ENFP,INTP,ENTP,ISFP|즐겁고 건강한 디지털 체험을 설계하는 능력이 중요하다.
+게임 배경 원화가|🕹️|컴퓨터·기술|게임 속 도시와 숲, 건물 등 공간의 모습을 그림으로 만든다.|게임공학과·게임디자인과·디지털콘텐츠학과|기획서 작성과 그림·프로그램 제작 경험이 도움이 된다|A,I,E|C,V,L|ENFP,INTP,ENTP,ISFP|즐겁고 건강한 디지털 체험을 설계하는 능력이 중요하다.
+게임 애니메이션 디자이너|🕹️|컴퓨터·기술|게임 속 인물과 물체가 자연스럽게 움직이도록 애니메이션을 만든다.|게임공학과·게임디자인과·디지털콘텐츠학과|기획서 작성과 그림·프로그램 제작 경험이 도움이 된다|A,I,E|C,V,L|ENFP,INTP,ENTP,ISFP|즐겁고 건강한 디지털 체험을 설계하는 능력이 중요하다.
+게임 품질 테스트 전문가|🕹️|컴퓨터·기술|게임을 여러 방법으로 플레이하며 오류와 불편한 점을 찾는다.|게임공학과·게임디자인과·디지털콘텐츠학과|기획서 작성과 그림·프로그램 제작 경험이 도움이 된다|A,I,E|C,V,L|ENFP,INTP,ENTP,ISFP|즐겁고 건강한 디지털 체험을 설계하는 능력이 중요하다.
+게임 커뮤니티 운영자|🕹️|컴퓨터·기술|게임 이용자들의 의견을 듣고 건강하게 소통할 수 있는 공간을 관리한다.|게임공학과·게임디자인과·디지털콘텐츠학과|기획서 작성과 그림·프로그램 제작 경험이 도움이 된다|A,I,E|C,V,L|ENFP,INTP,ENTP,ISFP|즐겁고 건강한 디지털 체험을 설계하는 능력이 중요하다.
+보드게임 개발자|🕹️|컴퓨터·기술|친구들과 함께 즐길 수 있는 보드게임의 규칙과 도구를 만든다.|게임공학과·게임디자인과·디지털콘텐츠학과|기획서 작성과 그림·프로그램 제작 경험이 도움이 된다|A,I,E|C,V,L|ENFP,INTP,ENTP,ISFP|즐겁고 건강한 디지털 체험을 설계하는 능력이 중요하다.
+퍼즐 게임 디자이너|🕹️|컴퓨터·기술|생각과 관찰로 해결할 수 있는 재미있는 퍼즐 문제를 만든다.|게임공학과·게임디자인과·디지털콘텐츠학과|기획서 작성과 그림·프로그램 제작 경험이 도움이 된다|A,I,E|C,V,L|ENFP,INTP,ENTP,ISFP|즐겁고 건강한 디지털 체험을 설계하는 능력이 중요하다.
+체험형 전시 콘텐츠 개발자|🕹️|컴퓨터·기술|전시 관람객이 손으로 조작하며 배울 수 있는 체험을 만든다.|게임공학과·게임디자인과·디지털콘텐츠학과|기획서 작성과 그림·프로그램 제작 경험이 도움이 된다|A,I,E|C,V,L|ENFP,INTP,ENTP,ISFP|즐겁고 건강한 디지털 체험을 설계하는 능력이 중요하다.
+인터랙티브 미디어 아티스트|🕹️|컴퓨터·기술|사람의 움직임이나 소리에 반응하는 디지털 예술 작품을 만든다.|게임공학과·게임디자인과·디지털콘텐츠학과|기획서 작성과 그림·프로그램 제작 경험이 도움이 된다|A,I,E|C,V,L|ENFP,INTP,ENTP,ISFP|즐겁고 건강한 디지털 체험을 설계하는 능력이 중요하다.
+가상현실 교육 콘텐츠 기획자|🕹️|컴퓨터·기술|가상현실을 이용해 역사와 과학 등을 체험하는 학습 활동을 설계한다.|게임공학과·게임디자인과·디지털콘텐츠학과|기획서 작성과 그림·프로그램 제작 경험이 도움이 된다|A,I,E|C,V,L|ENFP,INTP,ENTP,ISFP|즐겁고 건강한 디지털 체험을 설계하는 능력이 중요하다.
+로봇 제어 엔지니어|🤖|컴퓨터·기술|로봇이 알맞은 속도와 방향으로 움직이게 제어 프로그램을 만든다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+로봇 설계 엔지니어|🤖|컴퓨터·기술|로봇의 몸체와 관절을 설계하고 잘 움직이는지 확인한다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+로봇 정비 전문가|🤖|컴퓨터·기술|로봇의 상태를 점검하고 낡은 부품을 바꾸어 정상 작동을 돕는다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+협동로봇 기술자|🤖|컴퓨터·기술|사람과 같은 공간에서 함께 일하는 로봇을 설치하고 작동을 돕는다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+의료 보조 로봇 개발자|🤖|컴퓨터·기술|병원에서 이동이나 물건 전달 등을 돕는 로봇을 설계한다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+재활 로봇 연구원|🤖|컴퓨터·기술|몸을 움직이는 연습을 돕는 로봇의 작동 방법을 연구한다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+수중 로봇 연구원|🤖|컴퓨터·기술|물속에서 생물과 환경을 관찰하는 로봇을 만들고 시험한다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+우주 탐사 로봇 엔지니어|🤖|컴퓨터·기술|달과 행성에서 관찰 활동을 할 로봇을 설계하고 실험한다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+스마트홈 개발자|🤖|컴퓨터·기술|집 안의 조명과 온도 등을 편리하게 조절하는 장치를 개발한다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+센서 개발자|🤖|컴퓨터·기술|빛과 온도, 움직임 등을 알아내는 작은 전자 장치를 만든다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+반도체 설계 엔지니어|🤖|컴퓨터·기술|컴퓨터와 기기에 들어가는 반도체 회로의 구조를 설계한다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+반도체 공정 엔지니어|🤖|컴퓨터·기술|반도체를 만드는 과정이 정확하게 진행되도록 기술을 관리한다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+전자회로 설계자|🤖|컴퓨터·기술|전자제품 안에서 전기가 알맞게 흐르도록 회로를 설계한다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+배터리 연구원|🤖|컴퓨터·기술|전기를 안전하게 저장하고 오래 사용할 수 있는 배터리를 연구한다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+전기차 충전 시스템 엔지니어|🤖|컴퓨터·기술|전기차를 편리하고 안전하게 충전하는 설비를 설계한다.|전기공학과·자동차공학과|전기 관련 지식과 안전 규정 공부가 중요하다.|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+자율주행 안전 연구원|🤖|컴퓨터·기술|스스로 움직이는 자동차가 도로에서 안전하게 작동하는지 시험한다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+스마트시티 기술자|🤖|컴퓨터·기술|도시의 교통과 에너지 시설을 효율적으로 관리하는 기술을 개발한다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+친환경 소재 개발자|🤖|컴퓨터·기술|환경에 부담이 적고 쓰기 편한 새로운 재료를 연구한다.|로봇공학과·기계공학과·전기전자공학과|수학·과학 지식과 안전한 제작·실험 경험이 도움이 된다|I,R|L,V,H|INTP,ISTP,INTJ,ENTJ|사람의 생활을 편리하고 안전하게 만드는 기술의 연구가 이어질 수 있다.
+미생물학자|🔬|과학·환경|눈에 보이지 않는 작은 생물이 어떻게 살아가는지 관찰하고 연구한다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+유전학 연구원|🔬|과학·환경|생물의 특징이 다음 세대로 전해지는 원리를 연구한다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+세포생물학자|🔬|과학·환경|생물을 이루는 세포의 구조와 움직임을 관찰하고 연구한다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+뇌과학 연구원|🔬|과학·환경|뇌가 감각과 기억, 생각을 처리하는 원리를 연구한다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+식품 미생물 연구원|🔬|과학·환경|음식 속 미생물을 살피고 식품을 안전하게 만드는 방법을 연구한다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+생물정보학 연구원|🔬|과학·환경|생물 연구에서 나온 많은 자료를 컴퓨터로 정리하고 분석한다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+나노과학 연구원|🔬|과학·환경|아주 작은 물질의 특징을 관찰하고 새로운 활용법을 찾는다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+광학 연구원|🔬|과학·환경|빛의 성질과 렌즈의 원리를 연구하고 활용 방법을 찾는다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+음향학 연구원|🔬|과학·환경|소리가 퍼지고 울리는 원리를 연구하여 좋은 소리 환경을 만든다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+극지 연구원|🔬|과학·환경|남극과 북극의 날씨와 얼음, 생물을 조사한다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+화산 연구원|🔬|과학·환경|화산의 움직임과 지형 변화를 관찰하고 자료를 분석한다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+지진 연구원|🔬|과학·환경|땅의 흔들림을 측정하고 지진이 일어나는 원리를 연구한다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+토양 연구원|🔬|과학·환경|흙의 특징과 건강한 토양을 유지하는 방법을 연구한다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+수질 연구원|🔬|과학·환경|강과 호수의 물을 검사해 깨끗한 물을 지키는 방법을 찾는다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+과학 데이터 관리자|🔬|과학·환경|실험에서 얻은 자료를 정확하게 모으고 다른 연구자가 활용하도록 정리한다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+통계학자|🔬|과학·환경|많은 자료에서 규칙을 찾아 문제를 이해하고 판단에 도움을 준다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+기초과학 실험 설계자|🔬|과학·환경|과학 질문에 답할 수 있도록 실험 순서와 방법을 계획한다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+우주 관측 연구원|🔬|과학·환경|망원경과 관측 자료로 별과 행성의 움직임을 조사한다.|생명과학과·물리학과·화학과·수학과 등 관련 학과|탐구·실험 기록과 통계·연구 능력이 도움이 된다|I,R|L,N,Q|INTP,INTJ,ISTJ,INFJ|새로운 현상을 밝히는 기초 연구는 다양한 기술과 배움의 토대가 된다.
+해양 쓰레기 저감 전문가|🌿|과학·환경|바다로 들어가는 쓰레기를 줄이고 해변을 깨끗하게 지킬 방법을 찾는다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+바다숲 복원 전문가|🌿|과학·환경|해조류가 자라는 바닷속 숲을 되살릴 방법을 조사하고 실천한다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+생물다양성 조사원|🌿|과학·환경|지역에 사는 생물의 종류와 수를 살펴 기록한다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+국립공원 자연해설사|🌿|과학·환경|국립공원의 생물과 지형을 방문객에게 알기 쉽게 설명한다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+멸종위기종 보호 연구원|🌿|과학·환경|사라질 위험이 있는 생물의 생활을 조사하고 보호 방법을 연구한다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+산불 예방 교육 전문가|🌿|과학·환경|숲을 안전하게 이용하고 불을 예방하는 생활 수칙을 알려 준다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+산림 생태 조사원|🌿|과학·환경|숲의 나무와 곤충, 토양 상태를 조사하여 건강한 숲을 살핀다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+도시 숲 조성 전문가|🌿|과학·환경|도시에 나무와 풀을 심을 공간을 계획하고 생장을 관리한다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+하천 복원 전문가|🌿|과학·환경|생물이 살기 좋은 하천을 만들기 위한 환경 개선을 계획한다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+탄소 배출량 분석가|🌿|과학·환경|활동에서 나오는 온실가스 양을 계산하고 줄이는 방법을 제안한다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+친환경 포장재 연구원|🌿|과학·환경|재활용하기 쉽고 환경에 부담이 적은 포장 재료를 개발한다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+자원순환 교육 강사|🌿|과학·환경|물건을 오래 쓰고 다시 활용하는 방법을 사람들에게 알려 준다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+업사이클링 제품 개발자|🌿|과학·환경|버려지는 재료를 새롭고 쓸모 있는 물건으로 다시 디자인한다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+환경교육 활동가|🌿|과학·환경|환경을 지키는 생활 습관을 알리는 교육과 캠페인을 기획한다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+태양광 발전 기술자|🌿|과학·환경|햇빛으로 전기를 만드는 장치의 설치와 관리 일을 돕는다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+풍력 발전 기술자|🌿|과학·환경|바람으로 전기를 만드는 설비를 점검하고 효율을 살핀다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+수소에너지 연구원|🌿|과학·환경|수소를 에너지원으로 안전하게 이용하는 방법을 연구한다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+에너지 효율 진단 전문가|🌿|과학·환경|건물과 기기가 에너지를 얼마나 쓰는지 조사하고 절약 방법을 찾는다.|환경공학과·생태학과·에너지공학과|자연 관찰과 환경 자료 분석, 현장 안전 교육이 도움이 된다|I,R,S|N,L,C|INFJ,INTJ,ISTJ,ENFJ|환경 보호와 에너지 절약을 위한 기술과 교육의 중요성이 이어질 수 있다.
+수경재배 기술자|🌾|동물·자연|흙 대신 물과 영양분을 이용해 식물이 잘 자라도록 관리한다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+스마트 양봉 전문가|🌾|동물·자연|벌의 상태를 관찰하고 장치를 이용해 벌통 환경을 관리한다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+도시 양봉가|🌾|동물·자연|도시에서 꿀벌을 안전하게 돌보며 벌이 자연에 주는 도움을 알린다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+종자 연구원|🌾|동물·자연|식물 씨앗의 특징을 살피고 건강한 품종을 연구한다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+식물 건강 관리 전문가|🌾|동물·자연|식물이 잘 자라지 못하는 원인을 살피고 알맞은 관리 방법을 찾는다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+유기농 재배 전문가|🌾|동물·자연|환경을 생각하는 방식으로 채소와 곡식을 재배한다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+과수 재배 전문가|🌾|동물·자연|사과와 배 같은 과일나무를 돌보고 건강한 열매를 기른다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+약용식물 재배 전문가|🌾|동물·자연|사람에게 유용하게 쓰이는 식물을 알맞은 환경에서 재배한다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+농산물 품질 검사원|🌾|동물·자연|채소와 과일의 상태를 살펴 안전하고 좋은 품질인지 확인한다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+농식품 유통 기획자|🌾|동물·자연|농장에서 나온 식품이 소비자에게 신선하게 전달되도록 계획한다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+농업 기계 설계자|🌾|동물·자연|농사일을 더 편하고 안전하게 돕는 기계를 설계한다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+농업 드론 운용 전문가|🌾|동물·자연|드론으로 농작물의 자라는 모습과 농경지 상태를 관찰한다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+곤충 생태 연구원|🌾|동물·자연|곤충이 살고 먹이를 찾는 모습을 관찰하며 생태를 연구한다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+버섯 재배 전문가|🌾|동물·자연|버섯이 잘 자라도록 온도와 습도를 조절하며 재배한다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+식물 종자 보전 전문가|🌾|동물·자연|다양한 식물의 씨앗을 모아 안전하게 보관하고 연구한다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+농촌 체험 프로그램 기획자|🌾|동물·자연|방문객이 농사와 자연을 즐겁게 배우는 체험 활동을 만든다.|농학과·원예학과·농업생명과학과|재배 실습과 생태·식물 관리 지식이 도움이 된다|R,I|N,H,L|ISFP,ISTJ,INTP,ESFJ|지속 가능한 먹거리 생산과 식물 보전의 중요성이 이어질 수 있다.
+야생동물 생태 조사원|🐾|동물·자연|야생동물이 어디에서 무엇을 먹고 사는지 관찰하고 기록한다.|동물자원학과·생물학과·동물보건 관련 학과|동물의 습성을 배우고 생명을 존중하는 돌봄 경험이 도움이 된다|S,I,R|N,P,Q|ISFJ,INFP,ISTJ,ENFP|생명 존중과 동물 복지를 실천하는 활동의 중요성이 이어질 수 있다.
+동물 보호소 관리자|🐾|동물·자연|보호가 필요한 동물의 생활 공간과 돌봄 활동을 관리한다.|동물자원학과·생물학과·동물보건 관련 학과|동물의 습성을 배우고 생명을 존중하는 돌봄 경험이 도움이 된다|S,I,R|N,P,Q|ISFJ,INFP,ISTJ,ENFP|생명 존중과 동물 복지를 실천하는 활동의 중요성이 이어질 수 있다.
+반려동물 영양 전문가|🐾|동물·자연|동물이 건강하게 먹을 수 있는 음식과 식단을 연구한다.|동물자원학과·생물학과·동물보건 관련 학과|동물의 습성을 배우고 생명을 존중하는 돌봄 경험이 도움이 된다|S,I,R|N,P,Q|ISFJ,INFP,ISTJ,ENFP|생명 존중과 동물 복지를 실천하는 활동의 중요성이 이어질 수 있다.
+동물 복지 연구원|🐾|동물·자연|동물이 건강하고 편안하게 살 수 있는 환경을 연구한다.|동물자원학과·생물학과·동물보건 관련 학과|동물의 습성을 배우고 생명을 존중하는 돌봄 경험이 도움이 된다|S,I,R|N,P,Q|ISFJ,INFP,ISTJ,ENFP|생명 존중과 동물 복지를 실천하는 활동의 중요성이 이어질 수 있다.
+조류 관찰 전문가|🐾|동물·자연|새의 종류와 이동, 번식 모습을 관찰하고 자료를 기록한다.|동물자원학과·생물학과·동물보건 관련 학과|동물의 습성을 배우고 생명을 존중하는 돌봄 경험이 도움이 된다|S,I,R|N,P,Q|ISFJ,INFP,ISTJ,ENFP|생명 존중과 동물 복지를 실천하는 활동의 중요성이 이어질 수 있다.
+수중 생물 사육사|🐾|동물·자연|수족관의 물고기와 바다 생물이 건강하게 살도록 돌본다.|동물자원학과·생물학과·동물보건 관련 학과|동물의 습성을 배우고 생명을 존중하는 돌봄 경험이 도움이 된다|S,I,R|N,P,Q|ISFJ,INFP,ISTJ,ENFP|생명 존중과 동물 복지를 실천하는 활동의 중요성이 이어질 수 있다.
+동물 행동 연구원|🐾|동물·자연|동물이 소리와 몸짓으로 의사소통하는 모습을 연구한다.|동물자원학과·생물학과·동물보건 관련 학과|동물의 습성을 배우고 생명을 존중하는 돌봄 경험이 도움이 된다|S,I,R|N,P,Q|ISFJ,INFP,ISTJ,ENFP|생명 존중과 동물 복지를 실천하는 활동의 중요성이 이어질 수 있다.
+반려동물 재활 보조 전문가|🐾|동물·자연|다친 동물이 회복 운동을 할 때 전문가의 지도를 받아 돕는다.|동물자원학과·생물학과·동물보건 관련 학과|동물의 습성을 배우고 생명을 존중하는 돌봄 경험이 도움이 된다|S,I,R|N,P,Q|ISFJ,INFP,ISTJ,ENFP|생명 존중과 동물 복지를 실천하는 활동의 중요성이 이어질 수 있다.
+동물 사진작가|🐾|동물·자연|동물의 특징과 생활 모습을 사진으로 기록하고 알린다.|동물자원학과·생물학과·동물보건 관련 학과|동물의 습성을 배우고 생명을 존중하는 돌봄 경험이 도움이 된다|S,I,R|N,P,Q|ISFJ,INFP,ISTJ,ENFP|생명 존중과 동물 복지를 실천하는 활동의 중요성이 이어질 수 있다.
+해양동물 교육사|🐾|동물·자연|바다 생물의 생활과 보호 방법을 관람객에게 설명한다.|동물자원학과·생물학과·동물보건 관련 학과|동물의 습성을 배우고 생명을 존중하는 돌봄 경험이 도움이 된다|S,I,R|N,P,Q|ISFJ,INFP,ISTJ,ENFP|생명 존중과 동물 복지를 실천하는 활동의 중요성이 이어질 수 있다.
+야생동물 보호 교육사|🐾|동물·자연|야생동물과 사람이 함께 안전하게 살아가는 방법을 알려 준다.|동물자원학과·생물학과·동물보건 관련 학과|동물의 습성을 배우고 생명을 존중하는 돌봄 경험이 도움이 된다|S,I,R|N,P,Q|ISFJ,INFP,ISTJ,ENFP|생명 존중과 동물 복지를 실천하는 활동의 중요성이 이어질 수 있다.
+반려동물 장난감 개발자|🐾|동물·자연|동물이 안전하고 즐겁게 놀 수 있는 장난감을 설계한다.|동물자원학과·생물학과·동물보건 관련 학과|동물의 습성을 배우고 생명을 존중하는 돌봄 경험이 도움이 된다|S,I,R|N,P,Q|ISFJ,INFP,ISTJ,ENFP|생명 존중과 동물 복지를 실천하는 활동의 중요성이 이어질 수 있다.
+관상어 관리 전문가|🐾|동물·자연|수조의 물과 환경을 관리하여 물고기가 건강하게 살도록 돕는다.|동물자원학과·생물학과·동물보건 관련 학과|동물의 습성을 배우고 생명을 존중하는 돌봄 경험이 도움이 된다|S,I,R|N,P,Q|ISFJ,INFP,ISTJ,ENFP|생명 존중과 동물 복지를 실천하는 활동의 중요성이 이어질 수 있다.
+양서류 생태 연구원|🐾|동물·자연|개구리와 도롱뇽 같은 양서류가 사는 환경을 조사한다.|동물자원학과·생물학과·동물보건 관련 학과|동물의 습성을 배우고 생명을 존중하는 돌봄 경험이 도움이 된다|S,I,R|N,P,Q|ISFJ,INFP,ISTJ,ENFP|생명 존중과 동물 복지를 실천하는 활동의 중요성이 이어질 수 있다.
+곤충 표본 연구원|🐾|동물·자연|곤충의 생김새와 특징을 기록하고 연구 자료를 정리한다.|동물자원학과·생물학과·동물보건 관련 학과|동물의 습성을 배우고 생명을 존중하는 돌봄 경험이 도움이 된다|S,I,R|N,P,Q|ISFJ,INFP,ISTJ,ENFP|생명 존중과 동물 복지를 실천하는 활동의 중요성이 이어질 수 있다.
+임상병리사|🩺|건강·의료|혈액과 여러 검체를 검사해 의료진이 건강 상태를 살피도록 돕는다.|임상병리학과|임상병리사 국가시험 합격과 면허가 필요하다.|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+방사선사|🩺|건강·의료|영상 검사 장비를 안전하게 다루어 몸속 상태를 살펴보는 검사를 돕는다.|방사선학과|방사선사 국가시험 합격과 면허가 필요하다.|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+보건의료정보관리사|🩺|건강·의료|병원의 진료 기록을 정확하게 정리하고 안전하게 관리한다.|보건의료정보관리 관련 학과|보건의료정보관리사 국가시험 합격과 면허가 필요하다.|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+의료기기 개발자|🩺|건강·의료|병원과 일상에서 쓰는 건강 관련 기기를 설계하고 시험한다.|보건학과·의공학과·재활 관련 학과|업무에 따라 국가 면허·자격 또는 전문 교육이 필요하며, 정확한 실습이 중요하다|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+보조공학 기기 전문가|🩺|건강·의료|장애인과 어르신이 편리하게 생활하도록 도와주는 기기를 고른다.|보건학과·의공학과·재활 관련 학과|업무에 따라 국가 면허·자격 또는 전문 교육이 필요하며, 정확한 실습이 중요하다|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+재활 운동 지도사|🩺|건강·의료|몸의 움직임을 회복하거나 건강을 지키는 운동을 지도한다.|보건학과·의공학과·재활 관련 학과|업무에 따라 국가 면허·자격 또는 전문 교육이 필요하며, 정확한 실습이 중요하다|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+건강교육 콘텐츠 제작자|🩺|건강·의료|건강한 생활 습관을 알려 주는 영상과 그림 자료를 만든다.|보건학과·의공학과·재활 관련 학과|업무에 따라 국가 면허·자격 또는 전문 교육이 필요하며, 정확한 실습이 중요하다|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+공중보건 연구원|🩺|건강·의료|지역 사람들의 건강 자료를 분석하고 건강을 지킬 방법을 연구한다.|보건학과·의공학과·재활 관련 학과|업무에 따라 국가 면허·자격 또는 전문 교육이 필요하며, 정확한 실습이 중요하다|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+보건교육사|🩺|건강·의료|사람들에게 건강한 생활과 질병 예방 방법을 교육한다.|보건학과·보건교육 관련 학과|보건교육사 국가자격 취득 요건을 확인해야 한다.|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+아동 놀이치료 전문가|🩺|건강·의료|어린이가 놀이를 통해 마음을 표현하고 성장하도록 돕는다.|아동학과·놀이치료 관련 학과|아동 심리와 놀이치료 전문 교육, 현장 실습이 중요하다.|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+아동 발달 연구원|🩺|건강·의료|어린이의 언어와 생각, 움직임이 자라는 과정을 연구한다.|보건학과·의공학과·재활 관련 학과|업무에 따라 국가 면허·자격 또는 전문 교육이 필요하며, 정확한 실습이 중요하다|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+노인운동 지도자|🩺|건강·의료|어르신이 안전하게 몸을 움직이고 건강을 지키도록 운동을 알려 준다.|보건학과·의공학과·재활 관련 학과|업무에 따라 국가 면허·자격 또는 전문 교육이 필요하며, 정확한 실습이 중요하다|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+수면 연구원|🩺|건강·의료|잠이 건강과 생활에 미치는 영향을 관찰하고 연구한다.|보건학과·의공학과·재활 관련 학과|업무에 따라 국가 면허·자격 또는 전문 교육이 필요하며, 정확한 실습이 중요하다|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+의학 통계 연구원|🩺|건강·의료|건강 연구에서 얻은 수치를 분석해 결과를 이해하도록 돕는다.|보건학과·의공학과·재활 관련 학과|업무에 따라 국가 면허·자격 또는 전문 교육이 필요하며, 정확한 실습이 중요하다|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+건강 앱 기획자|🩺|건강·의료|운동과 수면 등 건강 습관을 기록하는 앱의 기능을 계획한다.|보건학과·의공학과·재활 관련 학과|업무에 따라 국가 면허·자격 또는 전문 교육이 필요하며, 정확한 실습이 중요하다|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+환자 경험 디자이너|🩺|건강·의료|환자가 병원에서 안내와 진료를 편하게 받을 수 있도록 서비스를 개선한다.|보건학과·의공학과·재활 관련 학과|업무에 따라 국가 면허·자격 또는 전문 교육이 필요하며, 정확한 실습이 중요하다|S,I|P,L,Q|ISFJ,INFJ,ISTJ,ENFJ|건강한 생활을 돕는 지식과 기술을 계속 배우는 것이 중요하다.
+독서 지도사|📚|교육·상담|어린이가 책의 재미를 느끼고 내용을 이해하도록 독서 활동을 안내한다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+교육용 교구 개발자|📚|교육·상담|어려운 개념을 놀이와 실험으로 익힐 수 있는 학습 도구를 만든다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+진로 체험 지도사|📚|교육·상담|학생이 여러 직업을 직접 체험하며 관심을 발견하도록 돕는다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+다문화 교육 강사|📚|교육·상담|다양한 문화와 언어를 이해하고 서로 존중하는 배움 활동을 이끈다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+학교 독서 프로그램 기획자|📚|교육·상담|학교에서 책을 읽고 이야기 나누는 행사를 기획한다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+유아 놀이 콘텐츠 개발자|📚|교육·상담|어린이가 놀이를 통해 배우는 그림책과 교구를 만든다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+교육 영상 제작자|📚|교육·상담|수업 내용을 알기 쉬운 영상과 애니메이션으로 제작한다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+역사 체험 강사|📚|교육·상담|옛사람의 생활과 문화유산을 체험하며 배우도록 돕는다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+코딩 교육 강사|📚|교육·상담|학생들에게 컴퓨터로 문제를 해결하는 방법을 알려 준다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+과학 실험 지도사|📚|교육·상담|어린이가 안전하게 실험하며 과학 원리를 이해하도록 돕는다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+수학 학습 콘텐츠 개발자|📚|교육·상담|수학 개념을 이해할 수 있는 문제와 놀이 활동을 만든다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+문해력 교육 연구원|📚|교육·상담|글을 읽고 이해하는 능력을 기르는 학습 방법을 연구한다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+미디어 리터러시 교육 강사|📚|교육·상담|온라인 정보를 올바르게 살피고 이용하는 방법을 알려 준다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+평생교육사|📚|교육·상담|성인과 지역 주민을 위한 여러 배움 프로그램을 기획하고 운영한다.|교육학과·평생교육 관련 학과|평생교육사 자격 요건을 충족해야 한다.|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+학습 상담 전문가|📚|교육·상담|학생의 공부 습관을 살펴 자신에게 맞는 학습 방법을 찾도록 돕는다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+디지털 학습 설계자|📚|교육·상담|태블릿과 온라인 도구를 이용해 효과적인 학습 활동을 설계한다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+학습 자료 일러스트레이터|📚|교육·상담|교과서와 학습지에 들어갈 그림을 알기 쉽게 그린다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+장애인 평생교육 지원사|📚|교육·상담|장애인이 편리하게 배울 수 있는 교육 환경과 활동을 지원한다.|교육학과·교육공학과·관련 교과 교육학과|관련 분야 공부와 수업·학습자료 제작 경험이 도움이 된다|S,A,I|G,P,C|ENFJ,ESFJ,INFJ,ENFP|다양한 사람이 배울 수 있도록 맞춤형 교육을 만드는 일이 중요하다.
+그림책 작가|🎨|예술·창작|그림과 글을 함께 구상하여 어린이가 즐길 수 있는 책을 만든다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+그림책 편집자|🎨|예술·창작|그림책의 글과 그림 배치를 조정해 읽기 좋은 책을 만든다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+표지 디자이너|🎨|예술·창작|책이나 음반의 내용을 잘 나타내는 겉표지를 디자인한다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+인포그래픽 디자이너|🎨|예술·창작|복잡한 정보를 그림과 도표로 쉽게 이해하도록 표현한다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+타이포그래피 디자이너|🎨|예술·창작|글자의 모양과 배치를 디자인해 정보를 잘 전달한다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+캘리그래퍼|🎨|예술·창작|붓이나 펜으로 글자를 아름답게 쓰고 작품을 만든다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+이모티콘 디자이너|🎨|예술·창작|표정과 몸짓이 담긴 작은 그림을 만들어 감정을 표현한다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+모션그래픽 디자이너|🎨|예술·창작|글자와 그림이 움직이는 짧은 영상 효과를 만든다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+3D 캐릭터 모델러|🎨|예술·창작|컴퓨터로 입체 캐릭터의 모양과 표면을 제작한다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+패키지 디자이너|🎨|예술·창작|물건을 보호하고 특징을 알리는 포장 상자를 디자인한다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+친환경 제품 디자이너|🎨|예술·창작|환경을 생각하면서 편리하게 사용할 제품을 구상한다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+서비스 디자이너|🎨|예술·창작|사람들이 서비스를 이용할 때 불편한 점을 찾아 개선한다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+전시 그래픽 디자이너|🎨|예술·창작|박물관과 전시회에서 정보를 알려 주는 그림과 표지를 만든다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+공공 안내표지 디자이너|🎨|예술·창작|길과 건물에서 누구나 알아보기 쉬운 안내 표지를 만든다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+미술 복원가|🎨|예술·창작|오래된 그림과 예술 작품을 조사하고 보존·복원 작업을 한다.|문화재보존학과·미술사학과|보존·복원 실습과 작품에 대한 전문 지식이 필요하다.|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+섬유 디자이너|🎨|예술·창작|옷과 생활용품에 사용할 천의 색과 무늬를 디자인한다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+패턴 디자이너|🎨|예술·창작|옷감과 포장지에 쓰는 반복 무늬를 만든다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+종이공예 작가|🎨|예술·창작|종이를 접고 자르고 붙여 입체 작품을 만든다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+스톱모션 애니메이터|🎨|예술·창작|인형과 물체를 조금씩 움직여 사진으로 찍고 애니메이션을 만든다.|시각디자인과·미술학과·디지털디자인과|그리기와 디자인 도구 연습, 작품집 준비가 도움이 된다|A,R|A,C,V|ISFP,INFP,ENFP,INTP|사람이 쉽게 이해하고 오래 사용할 수 있는 디자인의 가치가 이어질 수 있다.
+인형극 배우|🎭|예술·공연|인형을 움직이고 목소리를 연기해 관객에게 이야기를 전한다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+인형 제작자|🎭|예술·공연|공연에 사용할 인형의 모양과 움직이는 장치를 만든다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+연극 연출가|🎭|예술·공연|배우와 무대팀이 이야기를 무대에 잘 나타내도록 공연을 이끈다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+무대 조명 디자이너|🎭|예술·공연|빛의 색과 밝기로 공연 장면의 분위기를 만든다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+무대 음향 감독|🎭|예술·공연|공연의 목소리와 음악이 잘 들리도록 소리를 조절한다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+공연 기획자|🎭|예술·공연|공연의 일정과 장소, 관객 안내 등 준비를 계획한다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+공연 홍보 기획자|🎭|예술·공연|공연의 매력을 사람들에게 알리는 홍보 활동을 만든다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+합창 지휘자|🎭|예술·공연|여러 사람이 목소리를 맞춰 노래하도록 연습을 이끈다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+오케스트라 지휘자|🎭|예술·공연|여러 악기 연주자가 박자와 표현을 맞추도록 지휘한다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+피아노 조율사|🎭|예술·공연|피아노의 음높이와 소리 상태를 조정해 좋은 소리를 만든다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+음악 프로듀서|🎭|예술·공연|노래와 연주가 음반으로 완성되도록 녹음과 제작을 기획한다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+뮤직비디오 감독|🎭|예술·공연|노래의 분위기를 보여 주는 영상 장면을 계획하고 촬영을 이끈다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+음악치료 전문가|🎭|예술·공연|전문 지식을 바탕으로 음악 활동을 활용한 치료를 돕는다.|음악치료학과·음악학과|음악치료 관련 전문 교육과 현장 실습이 중요하다.|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+어린이 공연 제작자|🎭|예술·공연|어린이 눈높이에 맞는 연극과 음악 공연을 기획하고 만든다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+전시 큐레이터|🎭|예술·공연|전시 주제에 어울리는 작품을 고르고 전시 순서를 계획한다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+미술관 도슨트|🎭|예술·공연|미술관의 작품과 작가 이야기를 관람객에게 알기 쉽게 설명한다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+문화 축제 기획자|🎭|예술·공연|지역 주민과 방문객이 함께 즐길 문화 행사를 계획한다.|공연예술학과·음악학과·문화예술경영학과|공연·제작 연습과 작품 활동 경험이 도움이 된다|A,S,E|U,C,P|ENFP,ISFP,ESFP,ENFJ|사람들에게 즐거움과 새로운 경험을 주는 문화 활동이 꾸준히 이어질 수 있다.
+동시 작가|✍️|사회·소통|어린이가 공감할 수 있는 마음과 장면을 짧은 시로 표현한다.|국어국문학과·미디어학과·문예창작과|글쓰기·자료 조사와 정확한 표현 연습이 도움이 된다|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+수필가|✍️|사회·소통|일상에서 느낀 생각과 경험을 글로 써서 독자에게 전한다.|국어국문학과·미디어학과·문예창작과|글쓰기·자료 조사와 정확한 표현 연습이 도움이 된다|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+과학 작가|✍️|사회·소통|과학 사실과 발견을 조사해 어린이도 이해할 수 있는 글을 쓴다.|국어국문학과·미디어학과·문예창작과|글쓰기·자료 조사와 정확한 표현 연습이 도움이 된다|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+여행 작가|✍️|사회·소통|여행한 장소의 풍경과 문화를 조사하고 글과 사진으로 소개한다.|국어국문학과·미디어학과·문예창작과|글쓰기·자료 조사와 정확한 표현 연습이 도움이 된다|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+학습 만화 작가|✍️|사회·소통|역사와 과학 같은 공부 내용을 재미있는 만화로 만든다.|국어국문학과·미디어학과·문예창작과|글쓰기·자료 조사와 정확한 표현 연습이 도움이 된다|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+라디오 작가|✍️|사회·소통|라디오 방송에 필요한 이야기와 진행 대본을 쓴다.|국어국문학과·미디어학과·문예창작과|글쓰기·자료 조사와 정확한 표현 연습이 도움이 된다|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+팟캐스트 기획자|✍️|사회·소통|목소리로 정보를 전하는 방송의 주제와 순서를 계획한다.|국어국문학과·미디어학과·문예창작과|글쓰기·자료 조사와 정확한 표현 연습이 도움이 된다|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+방송 자막 제작자|✍️|사회·소통|영상에 맞는 정확하고 읽기 쉬운 자막을 만든다.|국어국문학과·미디어학과·문예창작과|글쓰기·자료 조사와 정확한 표현 연습이 도움이 된다|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+쉬운 글 번역 전문가|✍️|사회·소통|복잡한 안내문을 누구나 이해하기 쉬운 말로 바꾸어 쓴다.|국어국문학과·미디어학과·문예창작과|글쓰기·자료 조사와 정확한 표현 연습이 도움이 된다|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+자막 번역가|✍️|사회·소통|다른 언어로 된 영상의 말을 우리말 자막으로 옮긴다.|국어국문학과·미디어학과·문예창작과|글쓰기·자료 조사와 정확한 표현 연습이 도움이 된다|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+수어 통역사|✍️|사회·소통|음성 언어와 수어 사이의 의사소통을 돕는다.|수어통역 관련 교육·언어학과|수어 실력과 관련 자격·현장 경험이 필요하다.|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+어린이 뉴스 제작자|✍️|사회·소통|어린이에게 필요한 소식을 조사해 알기 쉽게 전한다.|국어국문학과·미디어학과·문예창작과|글쓰기·자료 조사와 정확한 표현 연습이 도움이 된다|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+교정·교열 전문가|✍️|사회·소통|글의 맞춤법과 표현을 점검해 읽기 쉬운 문장으로 다듬는다.|국어국문학과·미디어학과·문예창작과|글쓰기·자료 조사와 정확한 표현 연습이 도움이 된다|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+오디오북 제작자|✍️|사회·소통|책을 소리로 들을 수 있도록 낭독과 녹음 제작을 이끈다.|국어국문학과·미디어학과·문예창작과|글쓰기·자료 조사와 정확한 표현 연습이 도움이 된다|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+책 리뷰 콘텐츠 제작자|✍️|사회·소통|읽은 책의 내용과 느낌을 글이나 영상으로 소개한다.|국어국문학과·미디어학과·문예창작과|글쓰기·자료 조사와 정확한 표현 연습이 도움이 된다|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+지역 소식 기자|✍️|사회·소통|우리 동네의 사람과 행사 소식을 취재해 알린다.|국어국문학과·미디어학과·문예창작과|글쓰기·자료 조사와 정확한 표현 연습이 도움이 된다|A,S,I|G,C,P|INFP,ENFP,INFJ,ENTP|다양한 매체에서 알기 쉽고 믿을 만한 정보를 전하는 일이 중요하다.
+떡 제조 전문가|🥨|손기술·음식|쌀과 곡물로 다양한 떡을 만들고 모양과 맛을 연구한다.|식품영양학과·식품공학과·조리학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+전통 음식 연구가|🥨|손기술·음식|우리나라 전통 음식을 조사하고 만드는 방법을 기록한다.|식품영양학과·조리학과·공예디자인과 등 관련 학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+건강 메뉴 개발자|🥨|손기술·음식|영양과 맛을 함께 생각해 새로운 음식 메뉴를 만든다.|식품영양학과·조리학과·공예디자인과 등 관련 학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+학교 급식 메뉴 개발자|🥨|손기술·음식|학생들의 영양과 기호를 생각하며 급식 식단을 연구한다.|식품영양학과·식품공학과·조리학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+카페 메뉴 개발자|🥨|손기술·음식|음료와 간식의 맛과 구성을 연구해 새로운 메뉴를 만든다.|식품영양학과·조리학과·공예디자인과 등 관련 학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+제과 상품 개발자|🥨|손기술·음식|새로운 쿠키와 케이크의 맛과 모양을 기획한다.|식품영양학과·조리학과·공예디자인과 등 관련 학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+발효 식품 연구원|🥨|손기술·음식|미생물을 활용하는 김치와 발효 식품의 특징을 연구한다.|식품영양학과·조리학과·공예디자인과 등 관련 학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+쇼콜라티에|🥨|손기술·음식|초콜릿의 맛과 모양을 살려 다양한 디저트를 만든다.|식품영양학과·조리학과·공예디자인과 등 관련 학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+잼 제조 전문가|🥨|손기술·음식|과일의 맛과 위생을 생각하며 잼을 만들고 품질을 살핀다.|식품영양학과·조리학과·공예디자인과 등 관련 학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+식품 위생 관리자|🥨|손기술·음식|음식을 만드는 장소와 과정이 위생 기준을 지키는지 점검한다.|식품영양학과·식품공학과·조리학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+식품 안전 검사원|🥨|손기술·음식|식품의 상태와 검사 결과를 살펴 안전한 먹거리인지 확인한다.|식품영양학과·식품공학과·조리학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+도자기 유약 디자이너|🥨|손기술·음식|그릇 표면의 색과 질감을 연구하고 안전한 재료를 고른다.|도예학과·공예디자인과|도자기 제작과 안전한 재료 사용, 소성 작업 교육이 필요하다.|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+목공 디자이너|🥨|손기술·음식|나무로 만드는 작은 가구와 생활용품의 모양을 설계한다.|식품영양학과·조리학과·공예디자인과 등 관련 학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+장난감 수리 전문가|🥨|손기술·음식|고장 난 장난감의 상태를 살피고 안전하게 고쳐 오래 쓰도록 돕는다.|식품영양학과·조리학과·공예디자인과 등 관련 학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+가죽 공예가|🥨|손기술·음식|가죽 재료를 이용해 지갑과 가방 같은 생활용품을 만든다.|식품영양학과·조리학과·공예디자인과 등 관련 학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+유리공예가|🥨|손기술·음식|유리의 색과 모양을 이용해 장식품과 공예 작품을 만든다.|식품영양학과·조리학과·공예디자인과 등 관련 학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+종이 복원 전문가|🥨|손기술·음식|찢어지거나 낡은 책과 종이 자료를 보존·복원한다.|식품영양학과·조리학과·공예디자인과 등 관련 학과|안전·위생 수칙을 지키며 만들기 실습을 하는 것이 도움이 된다|R,A,I|H,C,A|ISFP,ESFP,ISTJ,ENFP|건강한 먹거리와 오래 사용하는 생활용품을 만드는 기술이 중요하다.
+건축 모형 제작자|🏠|건축·도시|건물을 짓기 전에 설계 내용을 작은 입체 모형으로 만든다.|건축학과·실내건축학과·도시공학과|공간 설계와 도면 읽기, 안전 기준 공부가 도움이 된다|R,A,I|V,L,C|INTJ,ISTP,ISFP,ENTJ|안전하고 모두에게 편리한 공간을 계획하는 역할이 중요하다.
+건축 설비 엔지니어|🏠|건축·도시|건물의 냉난방과 공기 순환 설비를 설계하고 관리한다.|건축학과·실내건축학과·도시공학과|공간 설계와 도면 읽기, 안전 기준 공부가 도움이 된다|R,A,I|V,L,C|INTJ,ISTP,ISFP,ENTJ|안전하고 모두에게 편리한 공간을 계획하는 역할이 중요하다.
+건축 에너지 설계자|🏠|건축·도시|건물이 전기를 적게 쓰고 쾌적하도록 단열과 설비를 계획한다.|건축학과·실내건축학과·도시공학과|공간 설계와 도면 읽기, 안전 기준 공부가 도움이 된다|R,A,I|V,L,C|INTJ,ISTP,ISFP,ENTJ|안전하고 모두에게 편리한 공간을 계획하는 역할이 중요하다.
+조명 설계자|🏠|건축·도시|집과 길, 공공시설에 알맞은 밝기와 색의 조명을 설계한다.|건축학과·실내건축학과·도시공학과|공간 설계와 도면 읽기, 안전 기준 공부가 도움이 된다|R,A,I|V,L,C|INTJ,ISTP,ISFP,ENTJ|안전하고 모두에게 편리한 공간을 계획하는 역할이 중요하다.
+공원 설계자|🏠|건축·도시|사람들이 쉬고 자연을 즐길 수 있는 공원의 길과 시설을 계획한다.|건축학과·실내건축학과·도시공학과|공간 설계와 도면 읽기, 안전 기준 공부가 도움이 된다|R,A,I|V,L,C|INTJ,ISTP,ISFP,ENTJ|안전하고 모두에게 편리한 공간을 계획하는 역할이 중요하다.
+어린이 놀이터 디자이너|🏠|건축·도시|어린이가 안전하게 놀 수 있는 놀이 공간과 시설을 디자인한다.|건축학과·실내건축학과·도시공학과|공간 설계와 도면 읽기, 안전 기준 공부가 도움이 된다|R,A,I|V,L,C|INTJ,ISTP,ISFP,ENTJ|안전하고 모두에게 편리한 공간을 계획하는 역할이 중요하다.
+유니버설 디자인 전문가|🏠|건축·도시|나이와 장애 유무에 관계없이 편한 제품과 공간을 설계한다.|건축학과·실내건축학과·도시공학과|공간 설계와 도면 읽기, 안전 기준 공부가 도움이 된다|R,A,I|V,L,C|INTJ,ISTP,ISFP,ENTJ|안전하고 모두에게 편리한 공간을 계획하는 역할이 중요하다.
+무장애 공간 설계자|🏠|건축·도시|휠체어나 유아차로도 쉽게 이동하는 건물과 길을 계획한다.|건축학과·실내건축학과·도시공학과|공간 설계와 도면 읽기, 안전 기준 공부가 도움이 된다|R,A,I|V,L,C|INTJ,ISTP,ISFP,ENTJ|안전하고 모두에게 편리한 공간을 계획하는 역할이 중요하다.
+도시 교통 데이터 분석가|🏠|건축·도시|교통 자료를 분석해 사람들이 편하게 이동할 방법을 찾는다.|건축학과·실내건축학과·도시공학과|공간 설계와 도면 읽기, 안전 기준 공부가 도움이 된다|R,A,I|V,L,C|INTJ,ISTP,ISFP,ENTJ|안전하고 모두에게 편리한 공간을 계획하는 역할이 중요하다.
+지하철 노선 기획자|🏠|건축·도시|사람들의 이동을 조사해 대중교통 노선을 계획한다.|건축학과·실내건축학과·도시공학과|공간 설계와 도면 읽기, 안전 기준 공부가 도움이 된다|R,A,I|V,L,C|INTJ,ISTP,ISFP,ENTJ|안전하고 모두에게 편리한 공간을 계획하는 역할이 중요하다.
+도시 자전거 교통 기획자|🏠|건축·도시|자전거를 안전하게 이용할 수 있는 길과 시설을 계획한다.|건축학과·실내건축학과·도시공학과|공간 설계와 도면 읽기, 안전 기준 공부가 도움이 된다|R,A,I|V,L,C|INTJ,ISTP,ISFP,ENTJ|안전하고 모두에게 편리한 공간을 계획하는 역할이 중요하다.
+수변 공간 설계자|🏠|건축·도시|하천과 호수 주변에서 안전하게 쉬는 공간을 설계한다.|건축학과·실내건축학과·도시공학과|공간 설계와 도면 읽기, 안전 기준 공부가 도움이 된다|R,A,I|V,L,C|INTJ,ISTP,ISFP,ENTJ|안전하고 모두에게 편리한 공간을 계획하는 역할이 중요하다.
+공공 도서관 공간 기획자|🏠|건축·도시|책을 읽고 공부하기 좋은 도서관 공간의 배치를 계획한다.|건축학과·실내건축학과·도시공학과|공간 설계와 도면 읽기, 안전 기준 공부가 도움이 된다|R,A,I|V,L,C|INTJ,ISTP,ISFP,ENTJ|안전하고 모두에게 편리한 공간을 계획하는 역할이 중요하다.
+학교 공간 디자이너|🏠|건축·도시|학생과 교사가 편리하게 배우고 쉬는 학교 공간을 디자인한다.|건축학과·실내건축학과·도시공학과|공간 설계와 도면 읽기, 안전 기준 공부가 도움이 된다|R,A,I|V,L,C|INTJ,ISTP,ISFP,ENTJ|안전하고 모두에게 편리한 공간을 계획하는 역할이 중요하다.
+마을 활동가|🤝|사회·소통|우리 동네 주민의 의견을 모아 마을을 더 살기 좋게 만드는 일을 한다.|사회복지학과·행정학과·사회학과|사람들의 이야기를 듣고 자료 조사와 협업을 경험하면 도움이 된다|S,E,C|P,G,Q|ENFJ,ESFJ,INFJ,ISFJ|사람을 배려하고 지역 문제를 함께 해결하는 활동이 중요하다.
+청소년 활동 기획자|🤝|사회·소통|청소년이 친구들과 즐겁고 유익하게 참여할 프로그램을 기획한다.|사회복지학과·행정학과·사회학과|사람들의 이야기를 듣고 자료 조사와 협업을 경험하면 도움이 된다|S,E,C|P,G,Q|ENFJ,ESFJ,INFJ,ISFJ|사람을 배려하고 지역 문제를 함께 해결하는 활동이 중요하다.
+노인 복지 프로그램 기획자|🤝|사회·소통|어르신의 건강과 즐거운 생활을 돕는 활동을 만든다.|사회복지학과·행정학과·사회학과|사람들의 이야기를 듣고 자료 조사와 협업을 경험하면 도움이 된다|S,E,C|P,G,Q|ENFJ,ESFJ,INFJ,ISFJ|사람을 배려하고 지역 문제를 함께 해결하는 활동이 중요하다.
+사회적경제 지원 전문가|🤝|사회·소통|지역에 도움이 되는 기업과 단체의 활동을 돕는다.|사회복지학과·행정학과·사회학과|사람들의 이야기를 듣고 자료 조사와 협업을 경험하면 도움이 된다|S,E,C|P,G,Q|ENFJ,ESFJ,INFJ,ISFJ|사람을 배려하고 지역 문제를 함께 해결하는 활동이 중요하다.
+국제구호 물류 담당자|🤝|사회·소통|도움이 필요한 지역에 구호 물품이 잘 전달되도록 준비한다.|사회복지학과·행정학과·사회학과|사람들의 이야기를 듣고 자료 조사와 협업을 경험하면 도움이 된다|S,E,C|P,G,Q|ENFJ,ESFJ,INFJ,ISFJ|사람을 배려하고 지역 문제를 함께 해결하는 활동이 중요하다.
+재난 대비 교육 강사|🤝|사회·소통|지진과 폭우 등에 안전하게 대비하는 행동을 알려 준다.|사회복지학과·행정학과·사회학과|사람들의 이야기를 듣고 자료 조사와 협업을 경험하면 도움이 된다|S,E,C|P,G,Q|ENFJ,ESFJ,INFJ,ISFJ|사람을 배려하고 지역 문제를 함께 해결하는 활동이 중요하다.
+지역 문화 코디네이터|🤝|사회·소통|지역 예술가와 주민이 함께할 문화 활동을 연결한다.|사회복지학과·행정학과·사회학과|사람들의 이야기를 듣고 자료 조사와 협업을 경험하면 도움이 된다|S,E,C|P,G,Q|ENFJ,ESFJ,INFJ,ISFJ|사람을 배려하고 지역 문제를 함께 해결하는 활동이 중요하다.
+주거 복지 상담사|🤝|사회·소통|사람들이 안전한 집에서 생활하도록 주거 관련 정보를 안내한다.|사회복지학과·행정학과·사회학과|사람들의 이야기를 듣고 자료 조사와 협업을 경험하면 도움이 된다|S,E,C|P,G,Q|ENFJ,ESFJ,INFJ,ISFJ|사람을 배려하고 지역 문제를 함께 해결하는 활동이 중요하다.
+시민 참여 프로그램 기획자|🤝|사회·소통|주민들이 지역 문제에 의견을 내고 참여할 활동을 만든다.|사회복지학과·행정학과·사회학과|사람들의 이야기를 듣고 자료 조사와 협업을 경험하면 도움이 된다|S,E,C|P,G,Q|ENFJ,ESFJ,INFJ,ISFJ|사람을 배려하고 지역 문제를 함께 해결하는 활동이 중요하다.
+공공 정책 연구원|🤝|사회·소통|사회 문제를 조사하고 사람들에게 도움이 되는 정책을 연구한다.|사회복지학과·행정학과·사회학과|사람들의 이야기를 듣고 자료 조사와 협업을 경험하면 도움이 된다|S,E,C|P,G,Q|ENFJ,ESFJ,INFJ,ISFJ|사람을 배려하고 지역 문제를 함께 해결하는 활동이 중요하다.
+공공데이터 분석가|🤝|사회·소통|공개된 자료를 분석해 지역 생활을 개선할 방법을 찾는다.|사회복지학과·행정학과·사회학과|사람들의 이야기를 듣고 자료 조사와 협업을 경험하면 도움이 된다|S,E,C|P,G,Q|ENFJ,ESFJ,INFJ,ISFJ|사람을 배려하고 지역 문제를 함께 해결하는 활동이 중요하다.
+교통약자 이동지원 상담원|🤝|사회·소통|이동에 도움이 필요한 사람에게 교통 지원 정보를 안내한다.|사회복지학과·행정학과·사회학과|사람들의 이야기를 듣고 자료 조사와 협업을 경험하면 도움이 된다|S,E,C|P,G,Q|ENFJ,ESFJ,INFJ,ISFJ|사람을 배려하고 지역 문제를 함께 해결하는 활동이 중요하다.
+수어 교육 강사|🤝|사회·소통|수어를 배우는 사람들에게 기본 표현과 소통 방법을 알려 준다.|사회복지학과·행정학과·사회학과|사람들의 이야기를 듣고 자료 조사와 협업을 경험하면 도움이 된다|S,E,C|P,G,Q|ENFJ,ESFJ,INFJ,ISFJ|사람을 배려하고 지역 문제를 함께 해결하는 활동이 중요하다.
+재능 나눔 프로그램 기획자|🤝|사회·소통|사람들이 가진 재능을 이웃과 나누는 활동을 기획한다.|사회복지학과·행정학과·사회학과|사람들의 이야기를 듣고 자료 조사와 협업을 경험하면 도움이 된다|S,E,C|P,G,Q|ENFJ,ESFJ,INFJ,ISFJ|사람을 배려하고 지역 문제를 함께 해결하는 활동이 중요하다.
+자원봉사 코디네이터|🤝|사회·소통|봉사할 사람과 도움이 필요한 곳을 연결하고 활동을 조정한다.|사회복지학과·행정학과·사회학과|사람들의 이야기를 듣고 자료 조사와 협업을 경험하면 도움이 된다|S,E,C|P,G,Q|ENFJ,ESFJ,INFJ,ISFJ|사람을 배려하고 지역 문제를 함께 해결하는 활동이 중요하다.
+배드민턴 선수|🏅|운동·스포츠|배드민턴 기술과 체력을 훈련하며 경기에 참가한다.|체육학과·스포츠과학과·생활체육 관련 학과|꾸준한 운동과 안전 수칙, 분야별 전문 훈련이 도움이 된다|R,S,E|M,P,Q|ESTP,ESFP,ISTP,ENFJ|건강한 운동 문화와 안전한 스포츠 활동을 돕는 일이 이어질 수 있다.
+탁구 선수|🏅|운동·스포츠|빠른 공에 반응하는 기술을 연습하고 탁구 대회에 참가한다.|체육학과·스포츠과학과·생활체육 관련 학과|꾸준한 운동과 안전 수칙, 분야별 전문 훈련이 도움이 된다|R,S,E|M,P,Q|ESTP,ESFP,ISTP,ENFJ|건강한 운동 문화와 안전한 스포츠 활동을 돕는 일이 이어질 수 있다.
+배구 선수|🏅|운동·스포츠|팀원과 협력해 공을 주고받는 배구 경기를 한다.|체육학과·스포츠과학과·생활체육 관련 학과|꾸준한 운동과 안전 수칙, 분야별 전문 훈련이 도움이 된다|R,S,E|M,P,Q|ESTP,ESFP,ISTP,ENFJ|건강한 운동 문화와 안전한 스포츠 활동을 돕는 일이 이어질 수 있다.
+육상 선수|🏅|운동·스포츠|달리기와 뛰기 등의 종목을 훈련하며 기록에 도전한다.|체육학과·스포츠과학과·생활체육 관련 학과|꾸준한 운동과 안전 수칙, 분야별 전문 훈련이 도움이 된다|R,S,E|M,P,Q|ESTP,ESFP,ISTP,ENFJ|건강한 운동 문화와 안전한 스포츠 활동을 돕는 일이 이어질 수 있다.
+체조 선수|🏅|운동·스포츠|몸의 균형과 유연성을 연습하고 체조 경기에 참가한다.|체육학과·스포츠과학과·생활체육 관련 학과|꾸준한 운동과 안전 수칙, 분야별 전문 훈련이 도움이 된다|R,S,E|M,P,Q|ESTP,ESFP,ISTP,ENFJ|건강한 운동 문화와 안전한 스포츠 활동을 돕는 일이 이어질 수 있다.
+자전거 선수|🏅|운동·스포츠|자전거를 빠르고 안전하게 타는 기술을 훈련하며 경기한다.|체육학과·스포츠과학과·생활체육 관련 학과|꾸준한 운동과 안전 수칙, 분야별 전문 훈련이 도움이 된다|R,S,E|M,P,Q|ESTP,ESFP,ISTP,ENFJ|건강한 운동 문화와 안전한 스포츠 활동을 돕는 일이 이어질 수 있다.
+스케이트 선수|🏅|운동·스포츠|빙판 위에서 균형과 속도를 조절하며 스케이트 경기에 참가한다.|체육학과·스포츠과학과·생활체육 관련 학과|꾸준한 운동과 안전 수칙, 분야별 전문 훈련이 도움이 된다|R,S,E|M,P,Q|ESTP,ESFP,ISTP,ENFJ|건강한 운동 문화와 안전한 스포츠 활동을 돕는 일이 이어질 수 있다.
+테니스 선수|🏅|운동·스포츠|라켓으로 공을 주고받는 기술을 훈련하며 경기에 참가한다.|체육학과·스포츠과학과·생활체육 관련 학과|꾸준한 운동과 안전 수칙, 분야별 전문 훈련이 도움이 된다|R,S,E|M,P,Q|ESTP,ESFP,ISTP,ENFJ|건강한 운동 문화와 안전한 스포츠 활동을 돕는 일이 이어질 수 있다.
+골프 선수|🏅|운동·스포츠|골프공을 정확하게 치는 기술을 연습하고 대회에 참가한다.|체육학과·스포츠과학과·생활체육 관련 학과|꾸준한 운동과 안전 수칙, 분야별 전문 훈련이 도움이 된다|R,S,E|M,P,Q|ESTP,ESFP,ISTP,ENFJ|건강한 운동 문화와 안전한 스포츠 활동을 돕는 일이 이어질 수 있다.
+배드민턴 코치|🏅|운동·스포츠|배드민턴을 배우는 사람에게 기술과 경기 예절을 지도한다.|체육학과·스포츠과학과·생활체육 관련 학과|꾸준한 운동과 안전 수칙, 분야별 전문 훈련이 도움이 된다|R,S,E|M,P,Q|ESTP,ESFP,ISTP,ENFJ|건강한 운동 문화와 안전한 스포츠 활동을 돕는 일이 이어질 수 있다.
+수영 강사|🏅|운동·스포츠|학생들이 안전하게 물에 익숙해지고 수영 기술을 배우도록 돕는다.|체육학과·스포츠과학과·생활체육 관련 학과|꾸준한 운동과 안전 수칙, 분야별 전문 훈련이 도움이 된다|R,S,E|M,P,Q|ESTP,ESFP,ISTP,ENFJ|건강한 운동 문화와 안전한 스포츠 활동을 돕는 일이 이어질 수 있다.
+스포츠 행사 운영자|🏅|운동·스포츠|학교와 지역의 스포츠 대회가 안전하고 원활하게 진행되도록 준비한다.|체육학과·스포츠과학과·생활체육 관련 학과|꾸준한 운동과 안전 수칙, 분야별 전문 훈련이 도움이 된다|R,S,E|M,P,Q|ESTP,ESFP,ISTP,ENFJ|건강한 운동 문화와 안전한 스포츠 활동을 돕는 일이 이어질 수 있다.
+여행 해설사|🧳|교통·항공|여행객에게 지역의 자연과 문화를 알기 쉽게 소개한다.|관광학과·항공서비스학과·관광경영학과|지역 문화와 교통 안전을 배우고 친절한 안내를 연습하면 도움이 된다|S,E,A|P,G,V|ESFJ,ENFP,ISFJ,ESTJ|안전하고 편리하며 지역 문화를 존중하는 여행 서비스가 중요하다.
+생태 관광 기획자|🧳|교통·항공|자연을 보호하면서 즐길 수 있는 여행 프로그램을 만든다.|관광학과·항공서비스학과·관광경영학과|지역 문화와 교통 안전을 배우고 친절한 안내를 연습하면 도움이 된다|S,E,A|P,G,V|ESFJ,ENFP,ISFJ,ESTJ|안전하고 편리하며 지역 문화를 존중하는 여행 서비스가 중요하다.
+지역 관광 홍보 전문가|🧳|교통·항공|지역의 즐길 거리와 문화유산을 널리 알리는 자료를 만든다.|관광학과·항공서비스학과·관광경영학과|지역 문화와 교통 안전을 배우고 친절한 안내를 연습하면 도움이 된다|S,E,A|P,G,V|ESFJ,ENFP,ISFJ,ESTJ|안전하고 편리하며 지역 문화를 존중하는 여행 서비스가 중요하다.
+공항 지상직 서비스 직원|🧳|교통·항공|공항에서 탑승 수속과 이용 안내를 도와준다.|관광학과·항공서비스학과·관광경영학과|지역 문화와 교통 안전을 배우고 친절한 안내를 연습하면 도움이 된다|S,E,A|P,G,V|ESFJ,ENFP,ISFJ,ESTJ|안전하고 편리하며 지역 문화를 존중하는 여행 서비스가 중요하다.
+철도 승무원|🧳|교통·항공|기차를 이용하는 사람의 좌석과 안전, 편의를 안내한다.|관광학과·항공서비스학과·관광경영학과|지역 문화와 교통 안전을 배우고 친절한 안내를 연습하면 도움이 된다|S,E,A|P,G,V|ESFJ,ENFP,ISFJ,ESTJ|안전하고 편리하며 지역 문화를 존중하는 여행 서비스가 중요하다.
+여행 안내 책자 제작자|🧳|교통·항공|여행 장소와 교통 정보를 조사해 읽기 쉬운 안내책을 만든다.|관광학과·항공서비스학과·관광경영학과|지역 문화와 교통 안전을 배우고 친절한 안내를 연습하면 도움이 된다|S,E,A|P,G,V|ESFJ,ENFP,ISFJ,ESTJ|안전하고 편리하며 지역 문화를 존중하는 여행 서비스가 중요하다.
+호텔 고객 서비스 관리자|🧳|교통·항공|호텔 이용객이 편안하게 머물도록 안내 서비스를 관리한다.|관광학과·항공서비스학과·관광경영학과|지역 문화와 교통 안전을 배우고 친절한 안내를 연습하면 도움이 된다|S,E,A|P,G,V|ESFJ,ENFP,ISFJ,ESTJ|안전하고 편리하며 지역 문화를 존중하는 여행 서비스가 중요하다.`;
+const JOBS=RAW_JOBS.trim().split('\n').map((line,index)=>{
+ const [name,emoji,category,doing,majors,certs,interests,aptitudes,mbtis,outlook]=line.split('|');
+ return {id:index,name,emoji,category,doing,majors,certs,interests:interests.split(','),aptitudes:aptitudes.split(','),mbtis:mbtis.split(','),outlook};
+});
+const state={interests:[],aptitudes:[],mbti:'',round:0,seen:new Set(),recent:[],current:null};
+const $=id=>document.getElementById(id);
+const itName=id=>INTERESTS.find(x=>x.id===id)?.name||id;
+const apName=id=>APTITUDES.find(x=>x.id===id)?.name||id;
+let toastTimer;
+function toast(message){const el=$('toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2700);}
+function buildChips(type,items,container){
+ const target=$(container);target.replaceChildren();
+ for(const item of items){
+  const btn=document.createElement('button');btn.type='button';btn.className='chip';btn.dataset.id=item.id;btn.setAttribute('aria-pressed','false');btn.setAttribute('aria-label',`${item.name} 선택`);
+  const emoji=document.createElement('span');emoji.className='emoji';emoji.setAttribute('aria-hidden','true');emoji.textContent=item.emoji;
+  const name=document.createElement('span');name.textContent=item.name;
+  btn.append(emoji,name);btn.addEventListener('click',()=>toggleType(type,item.id,btn));target.append(btn);
+ }
+}
+function toggleType(type,id,btn){
+ const items=state[type];const index=items.indexOf(id);
+ if(index>=0){items.splice(index,1);btn.setAttribute('aria-pressed','false');}
+ else if(items.length===3){toast('✨ 최대 3개까지만 선택할 수 있어요!');return;}
+ else{items.push(id);btn.setAttribute('aria-pressed','true');}
+ $(type==='interests'?'interestCount':'aptitudeCount').textContent=`${items.length} / 최대 3개`;
+ updateFormHint();
+}
+function setMbtiStatus(message,ok=false){const target=$('mbtiStatus');target.textContent=message;target.classList.toggle('ok',ok);$('mbtiInput').setAttribute('aria-invalid',String(Boolean(message)&&!ok));}
+function validateMbtiInput(){
+ const el=$('mbtiInput');const raw=el.value.normalize('NFKC').toUpperCase();
+ const english=raw.replace(/[^A-Z]/g,'');
+ let clean='';let invalid=false;
+ for(const char of english){
+  if(clean.length>=4){invalid=true;break;}
+  if(!MBTI_PAIRS[clean.length].includes(char)){invalid=true;break;}
+  clean+=char;
+ }
+ const hadOther=raw!==english;
+ el.value=clean;state.mbti=clean;
+ if(hadOther){setMbtiStatus('⚠️ 한글·숫자·기호는 사용할 수 없어요. 영어 4글자로 다시 입력해 주세요.');}
+ else if(invalid){setMbtiStatus('⚠️ 글자 순서가 맞지 않아요! E/I → S/N → F/T → J/P 중에서 입력해 주세요.');}
+ else if(clean.length===4&&MBTI_RE.test(clean)){setMbtiStatus('✅ 올바른 성격 유형이에요! 아주 잘했어요.',true);}
+ else if(clean.length){setMbtiStatus(`${clean.length}/4글자 입력했어요. 나머지 글자도 입력해 주세요.`,true);}
+ else{setMbtiStatus('');}
+ updateFormHint();
+}
+function updateFormHint(){
+ const complete=state.interests.length>0&&state.aptitudes.length>0&&MBTI_RE.test(state.mbti);
+ $('findJobsBtn').setAttribute('aria-disabled',String(!complete));
+ $('formHelper').textContent=complete?'🎉 준비 완료! 이제 나만의 직업을 만나러 가 볼까요?':'흥미·적성을 각각 1개 이상 고르고, 성격 유형 4글자를 입력해 주세요.';
+}
+function showStage(which){
+ $('formStage').hidden=which!=='form';$('recommendStage').hidden=which!=='recommend';$('detailStage').hidden=which!=='detail';
+ ['p1','p2','p3'].forEach((id,index)=>{let active=index===({form:0,recommend:1,detail:2}[which]);$(id).classList.toggle('active',active);if(active)$(id).setAttribute('aria-current','step');else $(id).removeAttribute('aria-current');});
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function matched(job){return {interests:job.interests.filter(i=>state.interests.includes(i)),aptitudes:job.aptitudes.filter(a=>state.aptitudes.includes(a))};}
+function jobScore(job){
+ const match=matched(job);
+ let score=match.interests.length*4.5+match.aptitudes.length*3.3;
+ if(job.interests.includes(state.interests[0]))score+=1.1;
+ if(job.aptitudes.includes(state.aptitudes[0]))score+=.9;
+ if(match.interests.length&&match.aptitudes.length)score+=2;
+ if(job.mbtis.includes(state.mbti))score+=1.3;
+ else{
+  let best=0;
+  for(const example of job.mbtis){let same=0;for(let i=0;i<4;i++)if(example[i]===state.mbti[i])same++;best=Math.max(best,same);}
+  score+=best*.2;
+ }
+ return score;
+}
+function pickFive(){
+ // 한 차례에서 다섯 개의 직업만, 최근에 본 직업은 가능한 한 피해서 추천해요.
+ let eligible=JOBS.filter(x=>!state.seen.has(x.id));
+ if(eligible.length<5){
+  const recentIds=new Set(state.recent);
+  state.seen=new Set(state.recent);
+  eligible=JOBS.filter(x=>!recentIds.has(x.id));
+ }
+ const scored=eligible.map(job=>({job,score:jobScore(job)+(Math.random()*2.2)})).sort((a,b)=>b.score-a.score);
+ const picked=[];const categories=new Map();
+ for(const e of scored){if(picked.length===5)break;const categoryCount=categories.get(e.job.category)||0;if(categoryCount>=2)continue;picked.push(e.job);categories.set(e.job.category,categoryCount+1);}
+ for(const e of scored){if(picked.length===5)break;if(!picked.includes(e.job))picked.push(e.job);}
+ for(const job of picked)state.seen.add(job.id);
+ state.recent=picked.map(x=>x.id);
+ return picked;
+}
+function addText(parent,tag,cls,text){const el=document.createElement(tag);if(cls)el.className=cls;el.textContent=text;parent.append(el);return el;}
+function renderProfile(){const el=$('profileSummary');el.replaceChildren();
+ const badges=[`💚 흥미: ${state.interests.map(itName).join(' · ')}`,`💛 적성: ${state.aptitudes.map(apName).join(' · ')}`,`💜 성격: ${state.mbti}`];
+ for(const b of badges)addText(el,'span','',b);
+}
+function renderRecommendations(){
+ const jobs=pickFive();state.round++;
+ renderProfile();const wrap=$('jobCards');wrap.replaceChildren();
+ jobs.forEach((job,index)=>{
+  const card=document.createElement('button');card.type='button';card.className='job-card';card.setAttribute('aria-label',`${job.name} 자세히 보기`);
+  const head=addText(card,'div','job-head','');
+  addText(head,'div','job-icon',job.emoji);
+  const titleBlock=addText(head,'div','','');addText(titleBlock,'div','job-category',`${index+1}번째 추천 · ${job.category}`);addText(titleBlock,'h3','',job.name);
+  addText(card,'p','doing',job.doing);
+  const match=matched(job);const reasons=[];
+  if(match.interests.length)reasons.push(`흥미 ${itName(match.interests[0])}`);
+  if(match.aptitudes.length)reasons.push(`적성 ${apName(match.aptitudes[0])}`);
+  if(reasons.length===0)reasons.push('새로운 분야를 알아볼 기회!');
+  addText(card,'div','why',`🌟 ${reasons.join(' · ')}`);
+  addText(card,'div','more','자세히 보기  ›');
+  card.addEventListener('click',()=>showDetail(job));wrap.append(card);
+ });
+ $('recommendInfo').textContent=`${state.round}번째 추천이에요! ${JOBS.length}개 직업 중에서 새로운 5가지를 찾아봤어요. 마음에 들지 않으면 다시 추천받아도 돼요.`;
+ showStage('recommend');
+}
+function line(parent,num,label,text){
+ const item=addText(parent,'div','work-item','');
+ const side=addText(item,'div','work-label','');addText(side,'span','label-round',String(num));addText(side,'span','',label);
+ addText(item,'div','work-text',text);
+}
+function detailRows(job){
+ return [
+  ['직업 이름',job.name],
+  ['하는 일',job.doing],
+  ['관련 학과나 자격',`관련 학과: ${job.majors} / 자격·준비: ${job.certs}`],
+  ['관련 적성·흥미·성격 유형',`흥미: ${job.interests.map(itName).join('·')} / 적성: ${job.aptitudes.map(apName).join('·')} / 성격 유형 참고 예시: ${job.mbtis.join('·')}`],
+  ['앞으로의 전망',job.outlook]
+ ];
+}
+function showDetail(job){
+ state.current=job;$('detailEmoji').textContent=job.emoji;$('detailCategory').textContent=job.category;$('detailTitle').textContent=job.name;
+ const wrap=$('detailContent');wrap.replaceChildren();detailRows(job).forEach(([label,value],index)=>line(wrap,index+1,label,value));showStage('detail');
+}
+function buildCopyText(){
+ if(!state.current)return '';
+ return `🌱 2단계: 관심 직업 탐색하기\n\n`+detailRows(state.current).map(([label,text])=>`${label}: ${text}`).join('\n')+`\n\n※ 관련 성격 유형은 참고 예시입니다. 모든 유형이 이 직업에 도전할 수 있습니다.`;
+}
+async function copyDetails(){const str=buildCopyText();if(!str)return;
+ try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(str);}
+ else{const ta=document.createElement('textarea');ta.value=str;ta.style.cssText='position:fixed;opacity:0;top:-1000px';document.body.append(ta);ta.select();const done=document.execCommand('copy');ta.remove();if(!done)throw Error('복사할 수 없음');}
+ toast('📋 5가지 조사 내용을 복사했어요!');}
+ catch(error){toast('복사할 수 없는 환경이에요. 화면을 보고 옮겨 적어 주세요.');}
+}
+
+// 인터넷 검색이 아닌, 이 HTML 안에 포함된 직업 정보만 찾습니다.
+// 학생이 편하게 쓰는 이름은 정식 직업명으로 연결합니다.
+const JOB_ALIASES = {
+ '선생님':'초등학교 교사','초등 선생님':'초등학교 교사','초등 교사':'초등학교 교사',
+ '초등학교 선생님':'초등학교 교사','유치원 선생님':'유치원 교사','어린이집 선생님':'보육교사',
+ '상담사':'심리상담사','심리 상담사':'심리상담사','심리치료사':'심리상담사',
+ '유튜버':'영상 크리에이터','유튜브 크리에이터':'영상 크리에이터',
+ '크리에이터':'영상 크리에이터','영상 제작자':'영상 크리에이터','쇼츠 크리에이터':'영상 크리에이터',
+ '게임 유튜버':'게임 방송 진행자','게임 스트리머':'게임 방송 진행자','스트리머':'1인 미디어 진행자',
+ '인터넷 방송인':'1인 미디어 진행자','방송인':'1인 미디어 진행자',
+ '아이돌':'아이돌 가수','영화배우':'배우','드라마 배우':'배우',
+ '성우 배우':'성우','댄스 가수':'아이돌 가수','댄스 선생님':'댄서','댄스강사':'댄서',
+ '비보이':'댄서','치어리딩 선수':'치어리더','가수 지망생':'가수','유명 가수':'가수',
+ '축구선수':'축구 선수','야구선수':'야구 선수','농구선수':'농구 선수',
+ '수영선수':'수영 선수','피겨선수':'피겨 스케이팅 선수','e스포츠선수':'프로게이머',
+ '이 스포츠 선수':'프로게이머','이스포츠 선수':'프로게이머','게임선수':'프로게이머',
+ '프로 게이머':'프로게이머','스포츠선수':'운동선수',
+ '운동 선수':'운동선수','축구 감독':'스포츠 감독','태권도 사범':'태권도 지도자',
+ '비행기 조종사':'항공기 조종사','파일럿':'항공기 조종사','비행기 승무원':'항공 승무원',
+ '승무원':'항공 승무원','스튜어디스':'항공 승무원','기장':'항공기 조종사',
+ '비행기 정비사':'항공 정비사','자동차 정비공':'자동차 정비사',
+ '기관사':'기차 기관사','버스기사':'버스 운전기사','택시기사':'택시 운전기사',
+ '수의사 선생님':'수의사','동물의사':'수의사','의사 선생님':'의사',
+ '치과 의사':'치과의사','의사선생님':'의사','간호사 선생님':'간호사',
+ '안경 전문가':'안경사','안경점 직원':'안경사',
+ '웹툰작가':'웹툰 작가','만화가':'웹툰 작가','동화작가':'동화 작가',
+ '소설가':'웹소설 작가','웹소설가':'웹소설 작가','일러스트 작가':'일러스트레이터',
+ '만화 작가':'웹툰 작가','그림작가':'일러스트레이터',
+ '컴퓨터 프로그래머':'프로그래머','코딩 개발자':'프로그래머',
+ '게임 프로그래머':'게임 개발자','게임 만드는 사람':'게임 개발자',
+ '게임 디자이너':'게임 그래픽 디자이너',
+ '로봇공학자':'로봇공학자','로봇 만드는 사람':'로봇 개발자',
+ '인공지능 전문가':'인공지능 개발자','ai 개발자':'인공지능 개발자',
+ '드론 조종사':'드론 조종 전문가','3d프린터 전문가':'3D 프린팅 전문가',
+ '경찰':'경찰관','소방관 아저씨':'소방관','소방대원':'소방관',
+ '구급대원':'119구급대원','환경미화사':'환경미화원',
+ '뷰티 디자이너':'미용사','헤어 디자이너':'미용사','헤어디자이너':'미용사',
+ '메이크업 아티스트':'메이크업 아티스트','메이크업 전문가':'메이크업 아티스트',
+ '네일아트 전문가':'네일 아티스트','네일아티스트':'네일 아티스트',
+ '동물 미용사':'반려동물 미용사','애견 미용사':'반려동물 미용사',
+ '애견훈련사':'반려동물 훈련사','동물 조련사':'반려동물 훈련사',
+ '동물 사육사':'동물원 사육사','사육사':'동물원 사육사',
+ '농업인':'농부','농사꾼':'농부','식물전문가':'식물 관리 전문가',
+ '셰프':'셰프','요리 연구가':'푸드 연구가','요리사':'요리사',
+ '파티셰':'파티시에','파티쉐':'파티시에','제빵사':'제빵사','빵 만드는 사람':'제빵사',
+ '플로리스트':'플로리스트','꽃집 사장':'플로리스트',
+ '우주인':'우주비행사','천체물리학자':'천문학자',
+ '기상 캐스터':'기상캐스터',
+ '정치외교관':'외교관','외교관님':'외교관','교수':'대학교 교수','국회의원님':'국회의원',
+ '인테리어 디자이너':'실내 디자이너',
+ '인테리어디자이너':'실내 디자이너','건물 설계사':'건축가',
+ '회계 전문가':'회계사','은행 직원':'은행원','호텔 직원':'호텔리어',
+ '레크리에이션 강사':'놀이·체험 활동 지도자','마술 공연자':'마술사','레고 전문가':'레고 모델 제작자',
+ '스포츠 트레이너':'운동 트레이너', '헬스트레이너':'운동 트레이너',
+ '탁구선수':'탁구 선수',
+ '배구선수':'배구 선수',
+ '육상선수':'육상 선수',
+ '체조선수':'체조 선수',
+ '자전거선수':'자전거 선수',
+ '스케이트선수':'스케이트 선수',
+ '테니스선수':'테니스 선수',
+ '골프선수':'골프 선수',
+ '배드민턴선수':'배드민턴 선수',
+ '웹접근성전문가':'웹 접근성 전문가',
+ 'AI윤리전문가':'AI 윤리 연구원',
+ '인공지능 윤리 전문가':'AI 윤리 연구원',
+ '보드게임 기획자':'보드게임 개발자',
+ '디지털 지도 제작자':'디지털 지도 개발자',
+ '캐릭터 모델러':'3D 캐릭터 모델러',
+ '이모티콘 작가':'이모티콘 디자이너',
+ '이모티콘 제작자':'이모티콘 디자이너',
+ '그림책작가':'그림책 작가',
+ '동시작가':'동시 작가',
+ '극지연구원':'극지 연구원',
+ '수어통역사':'수어 통역사',
+ '스톱모션 제작자':'스톱모션 애니메이터',
+ '공항 직원':'공항 지상직 서비스 직원',
+ '공항 지상직':'공항 지상직 서비스 직원',
+ '배드민턴 지도자':'배드민턴 코치',
+ '수영선생님':'수영 강사',
+ '수영 선생님':'수영 강사',
+ '드론 농업 전문가':'농업 드론 운용 전문가',
+ '음악치료사':'음악치료 전문가',
+ '미술복원가':'미술 복원가',
+ '의료기기 연구원':'의료기기 개발자',
+ '반도체 엔지니어':'반도체 설계 엔지니어',
+ '앱 기획자':'건강 앱 기획자',
+ '수질 검사원':'수질 연구원'
+};
+function normalizeJobText(text){return text.normalize('NFKC').toLowerCase().replace(/[\s·.()_\-]/g,'');}
+const ALIAS_MAP=new Map(Object.entries(JOB_ALIASES).map(([key,name])=>[normalizeJobText(key),name]));
+const JOB_MAP=new Map(JOBS.map(job=>[normalizeJobText(job.name),job]));
+// 흔히 쓰이는 욕설·혐오/선정/불법/폭력 관련 표현을 차단합니다.
+// 자동 감지는 완벽할 수 없으므로, 뜻이 애매한 직업명은 준비된 직업에서만 검색합니다.
+const UNSAFE_TERMS=[
+ '씨발','시발','씨팔','시팔','ㅅㅂ','ㅆㅂ','ㅂㅅ','병신','개새끼','개색','새끼','ㅈㄴ','존나',
+ '좆','좃','좇','지랄','ㅈㄹ','ㅗ','니애미','느금','애미','꺼져','뒤져','죽어',
+ '섹스','야동','포르노','음란','성매매','강간','성폭행','성희롱','변태','노출',
+ '살인','암살','납치','폭탄','테러','총기','흉기','청부','방화','강도','도둑','밀렵꾼','해적','무기상',
+ '마약','대마초','필로폰','도박','사기꾼','불법','범죄','해킹범','착취','밀수','사기범',
+ '바보','멍청이','꺼지','똥꼬','시체','혐오'
+];
+const UNSAFE_NORMALIZED=UNSAFE_TERMS.filter(x=>x!=='ㅗ').map(normalizeJobText);
+function validateJobName(raw){
+ const text=raw.trim().normalize('NFKC');
+ const normalized=normalizeJobText(text);
+ if(!normalized)return '먼저 궁금한 직업의 이름을 적어 주세요.';
+ if(text.length<2||text.length>30)return '직업 이름은 2~30글자로 작성해 주세요.';
+ // 인터넷 주소·문장·기호 및 외부 링크 유도를 허용하지 않습니다.
+ if(/(?:ㅅ\s*ㅂ|ㅆ\s*ㅂ|ㅂ\s*ㅅ|ㅈ\s*ㄹ|ㅈ\s*ㄴ)/.test(raw))return '올바르지 않은 표현이에요. 바른 직업 이름으로 다시 작성해 주세요.';
+ if(!/^[가-힣a-zA-Z0-9\s·.()\-_]+$/.test(text) || /(?:https?|www|\.com|\.kr|\.net)/i.test(text))return '직업 이름만 바르게 작성해 주세요. 주소나 특수 기호는 입력할 수 없어요.';
+ const compact=normalized.replace(/[_]/g,'');
+ if(/(?:^|[^a-z])(fuck|shit|bitch|porn|sex|rape|kill|killer|murder|murderer|terrorist|assassin|scammer|thief|robber|hitman|gambling|drugdealer)(?:$|[^a-z])/i.test(raw))return '올바르지 않은 표현이에요. 바른 직업 이름으로 다시 작성해 주세요.';
+ if(UNSAFE_NORMALIZED.some(term=>term&&compact.includes(term))||/(?:ㅅ\s*ㅂ|ㅆ\s*ㅂ|ㅂ\s*ㅅ|ㅈ\s*ㄹ|ㅈ\s*ㄴ)/.test(raw)||/(?:시\s*발|씨\s*발|병\s*신)/.test(raw))return '올바르지 않은 표현이에요. 바른 직업 이름으로 다시 작성해 주세요.';
+ return '';
+}
+function setJobMessage(msg,kind=''){const message=$('customJobMessage');message.textContent=msg;message.className='search-msg'+(kind?' '+kind:'');}
+function showJobMatches(jobs,prefix){
+ const el=$('customJobMatches');el.replaceChildren();
+ if(!jobs.length){el.hidden=true;return;}
+ jobs.slice(0,8).forEach(job=>{
+  const b=document.createElement('button');b.type='button';b.textContent=`${job.emoji} ${job.name}`;
+  b.addEventListener('click',()=>showDetail(job));el.append(b);
+ });
+ el.hidden=false;
+ setJobMessage(prefix || '비슷한 직업을 찾았어요! 궁금한 직업을 눌러 보세요.');
+}
+function searchStudentJob(){
+ const raw=$('customJobInput').value;
+ const warning=validateJobName(raw);
+ if(warning){setJobMessage('⚠️ '+warning,'error');showJobMatches([]);if(warning.startsWith('올바르지 않은 표현'))$('customJobInput').value='';return;}
+ const query=normalizeJobText(raw);
+ let found=JOB_MAP.get(query);
+ if(!found&&ALIAS_MAP.has(query))found=JOB_MAP.get(normalizeJobText(ALIAS_MAP.get(query)));
+ if(found){showJobMatches([]);setJobMessage('✅ 찾았어요! 직업 조사 내용을 보여 줄게요.');showDetail(found);return;}
+ showJobMatches([]);
+ setJobMessage('⚠️ 직업 이름으로 확인되지 않는 단어예요. 직업이 아닌 단어이거나 등록되지 않은 직업일 수 있어요. 올바른 직업 이름으로 다시 작성해 주세요.','error');
+}
+
+function start(){
+ if(!state.interests.length){toast('먼저 흥미 유형을 1개 이상 골라 주세요.');$('interestSection').scrollIntoView({behavior:'smooth',block:'center'});return;}
+ if(!state.aptitudes.length){toast('적성 유형을 1개 이상 골라 주세요.');$('aptitudeSection').scrollIntoView({behavior:'smooth',block:'center'});return;}
+ if(!MBTI_RE.test(state.mbti)){setMbtiStatus('⚠️ 성격 유형은 E/I, S/N, F/T, J/P 순서로 영어 대문자 4글자를 입력해야 해요.');toast('성격 유형 4글자를 확인해 주세요!');$('personalitySection').scrollIntoView({behavior:'smooth',block:'center'});$('mbtiInput').focus();return;}
+ state.round=0;state.seen.clear();state.recent=[];renderRecommendations();
+}
+buildChips('interests',INTERESTS,'interestChips');buildChips('aptitudes',APTITUDES,'aptitudeChips');
+$('mbtiInput').addEventListener('input',validateMbtiInput);
+$('mbtiInput').addEventListener('compositionend',validateMbtiInput);
+$('mbtiInput').addEventListener('keydown',event=>{
+ if(event.key.length===1&&!event.ctrlKey&&!event.metaKey&&!event.altKey){
+  const uppercase=event.key.toUpperCase();
+  if(!/^[A-Z]$/.test(uppercase)){event.preventDefault();setMbtiStatus('⚠️ 영어 알파벳만 입력할 수 있어요. 한글·숫자·기호는 사용할 수 없어요.');return;}
+  const input=event.currentTarget;
+  const start=input.selectionStart??input.value.length,end=input.selectionEnd??start;
+  const proposed=input.value.slice(0,start)+uppercase+input.value.slice(end);
+  if(proposed.length>4||!MBTI_PAIRS.every((pair,i)=>!proposed[i]||pair.includes(proposed[i]))){
+   event.preventDefault();setMbtiStatus('⚠️ 순서에 맞지 않는 글자예요. 첫째 E/I, 둘째 S/N, 셋째 F/T, 넷째 J/P만 가능해요.');return;
+  }
+ }
+});
+$('customJobForm').addEventListener('submit',event=>{event.preventDefault();searchStudentJob();});
+$('customJobInput').addEventListener('input',()=>{
+ const text=$('customJobInput').value;
+ const error=validateJobName(text);
+ if(error.startsWith('올바르지 않은 표현')){$('customJobInput').value='';showJobMatches([]);setJobMessage('⚠️ '+error,'error');}
+ else if(!text.trim()) {showJobMatches([]);setJobMessage('💚 직업 이름을 입력하면 이 화면 안에서 찾아볼 수 있어요.');}
+ else {showJobMatches([]);setJobMessage('🔍 직업 이름을 적은 뒤 「이 직업 알아보기」를 눌러 주세요.');}
+});
+document.querySelectorAll('[data-example]').forEach(button=>button.addEventListener('click',()=>{
+ $('customJobInput').value=button.dataset.example;searchStudentJob();
+}));
+$('findJobsBtn').addEventListener('click',start);
+$('rerollBtn').addEventListener('click',renderRecommendations);
+$('changeBtn').addEventListener('click',()=>showStage('form'));
+$('backToJobsBtn').addEventListener('click',()=>showStage('recommend'));
+$('copyBtn').addEventListener('click',copyDetails);
+$('printBtn').addEventListener('click',()=>window.print());
+updateFormHint();
+</script>
+</body>
+</html>
